@@ -1,0 +1,117 @@
+/*Header formatting*/
+/*The outside*/
+.header {
+  border: 3px solid;
+  padding: 15px;
+  height: 125px;
+  width: auto;
+  background-color: grey;
+  position:relative;
+}
+/*Personal Information Box*/
+.personal {
+  border: 3px solid;
+  padding: 15px;
+  text-align: center;
+  float: left;
+  font-size: 16px;
+  transform: translateY(5%);
+  font-family: Calibri;
+  background-color: white;
+  position: relative;
+  z-index: 1;
+}
+/*Page Titles*/
+.title {
+  font-family: Calibri;
+  text-align: center;
+  transform: translateX(-5%);
+  /*background-color: grey;*/
+  position: relative;
+  width: 500;
+}
+/*contact info*/
+.contact {
+  border: 3px solid;
+  padding: 15px;
+  text-align: center;
+  float: right;
+  width: 125px;
+  font-size: 24px;
+  transform: translateY(-55%);
+  font-family: Calibri;
+  background-color: white;
+  position:relative;
+}
+/*I don't want links to change color*/
+a:visited,a:link {
+  color: inherit;
+  text-decoration: none;
+}
+/*For the icons*/
+.fa {
+  color: grey;
+}
+/*Navigation Buttons*/
+.navigation {
+  border: 3px solid;
+  padding-top: 15px;
+  padding-right: 25px;
+  padding-bottom: 15px;
+  text-align: center;
+  font-size: 24px;
+  font-family: Calibri;
+  font-weight: bold;
+  margin-top: 3px;
+  background-color: grey;
+}
+.nav_elem {
+  padding-right: 15px;
+  padding-left: 15px;
+  border: 3px solid;
+  margin: 5px;
+  background-color: white;
+}
+.nav_elem_out {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 5px;
+  border: 3px solid;
+  background-color: white;
+}
+
+.explain {
+  width: auto;
+  margin: auto;
+  border: 3px solid;
+  padding: 5px;
+  height: auto;
+  background-color: white;
+  font-family: Calibri;
+  font-size: 16pt;
+  line-height: 150%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.tableSection {
+  font-family: Calibri;
+  width: 100%;
+  margin: 0;
+}
+
+.theTable {
+  width: 100%;
+  margin: 0;
+  border: 3px solid;
+}
+
+th, td {
+  border: 1px solid;
+  text-align: center;
+}
+
+td {
+  width: 30%;
+}
+
