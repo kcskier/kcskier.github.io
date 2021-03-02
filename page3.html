@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Kendell Crocker - About You</title>
+  <link rel="stylesheet" href="style3.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ </head>
+
+<!--Header, this is mostly the same for each page-->
+<section class="header">
+    <!--Basic Information goes on the Left-->
+    <div class="personal">
+        <h3>Kendell Crocker</h3>
+        <div>OSU Computer Science</div>
+    </div>
+    
+    <!--And Page Title Goes In The Center-->
+        <div class="title">
+            <h1>About You</h1>
+        </div>
+    
+    <!--Contact Info Goes On The Right-->
+        <div class="contact">
+            <a href="mailto:crockerk@oregonstate.edu"> <i class="fa fa-envelope"></i> Email</a><br>
+            <a href="https://github.com/kcskier"> <i class="fa fa-github"></i> Github</a><br>
+            <a href="https://www.linkedin.com/in/kendell-crocker-b2144519b"> <i class="fa fa-linkedin"></i> Linkedin</a><br>
+        </div>
+    
+    </section>
+    
+    <!--Navigation around the website-->
+    <section class="navigation">
+        <a class="nav_elem_out" href="index.html">Home</a>
+        <a class="nav_elem" href="page2.html">About Me</a>
+        <a class="nav_elem" href="page3.html">About You</a>
+        <a class="nav_elem_out" href="page4.html">Visitors</a>
+    </section>
+
+    <!--This page has a form, the form will be submitted, and sent as a JSON to a server.
+        NOTE: Didn't get the server up, so I sent it to the GET/POST checker we used before.-->
+<section class="submittable">
+    <form class="input_form">
+        <h2 style="text-align: center;">About You</h2>
+        <label for="loc">Do you live near Corvallis?</label><br>
+        <input type="radio" id="loc_yes" name="loc" value="Yes"> Yes
+        <input type="radio" id="loc_no" name="loc" value="No"> No<br> 
+        <label for="name">Name: </label><input type="text" id="name"><br>
+        <label for="hobby">Favorite Hobby: </label><input type="text" id="hobby"><br>
+        <label for="age">Age: </label><select id="age"></select><br>
+        <label for="submit"></label><button id="submit" type="button" onclick="submit_form()">Submit</button>
+    </form>
+    <div class="explain">
+        This form asks a few simple questions, then sends them to a server as a POST request.
+        NOTE: Unfortunately, the server didn't get setup in time, so it sends it to the GET/POST checker
+        we've used before.
+    </div>
+</section>
+
+<script>
+    var age_select = document.getElementById("age");
+
+    //Fills out the ages for the radio
+    function pop_ages(selector) {
+        var default_val = document.createElement("option");
+        default_val.text = "";
+        selector.add(default_val);
+        for (i = 12; i < 86; i++) {
+            var opt = document.createElement("option");
+            opt.text = i;
+            selector.add(opt);
+        };
+    };
+
+    pop_ages(age_select);
+
+    //Submit
+    function submit_form() {
+        var url = "http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php";
+        var http = new XMLHttpRequest();
+
+        var loc = document.getElementById("loc_yes").value;
+        var name = document.getElementById("name").value;
+        var hobby = document.getElementById("hobby").value;
+        var age = document.getElementById("age").value;
+        if (document.getElementById("loc_yes").checked) {
+            loc = "Yes";
+        }
+        else {
+            loc = "No";
+        }
+
+        var data = JSON.parse("{\"Local\" : \"" + loc + "\", \"Name\" : \"" + name + "\", \"Hobby\" : \"" + hobby + "\", \"Age\" : \"" + age + "\"}");
+        console.log(data);
+        http.open("POST", "https://httpbin.org/post", false);
+	    http.setRequestHeader('Content-Type', 'application/json');
+	    http.send(JSON.stringify(data));
+	    console.log(JSON.parse(http.responseText));
+
+        //Creates our elements
+        var resp_loc = document.createElement("div");
+        var resp_name = document.createElement("div");
+        var resp_hobby = document.createElement("div");
+        var resp_age = document.createElement("div");
+        //Text Style
+        resp_loc.style.fontFamily = "Calibri";
+        resp_loc.style.fontSize = "16pt";
+        resp_name.style.fontFamily = "Calibri";
+        resp_name.style.fontSize = "16pt";
+        resp_hobby.style.fontFamily = "Calibri";
+        resp_hobby.style.fontSize = "16pt";
+        resp_age.style.fontFamily = "Calibri";
+        resp_age.style.fontSize = "16pt";
+        //Actual Text
+        resp_name.textContent = "You are " + JSON.parse(http.response).json.Name;
+        resp_loc.textContent = "You are a " + JSON.parse(http.response).json.Friend;
+        resp_hobby.textContent = "Your favorite food is " + JSON.parse(http.response).json.Food;
+        resp_age.textContent = "You are " + JSON.parse(http.response).json.Age + " years old.";
+        //Add text to body
+        document.body.appendChild(resp_name);
+        document.body.appendChild(resp_loc);
+        document.body.appendChild(resp_hobby);
+        document.body.appendChild(resp_age);
+    };
+</script>
+
+</html>
