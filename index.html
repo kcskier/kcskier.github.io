@@ -28,7 +28,7 @@
 	<header id="header">
 		<div class="content">
 			<h1><a href="#">Kendell Crocker</a></h1>
-			<p>Building, Connecting, Exploring</p>
+			<p>Systems & Networking | AD · Azure · Linux · Cloud</p>
 		</div>
 		<div><img src="images/profile.jpg" alt="" /></div>
 		</div>
@@ -42,8 +42,8 @@
 		<ul class="icons labeled">
 			<li><a href="mailto:kcskier12@gmail.com" class="icon label fa-envelope"><span
 						class="label">kcskier12@gmail.com</span></a></li>
-			<li><a href="https://joinhandshake.com" class="icon label fa-handshake"><span
-						class="label">crockerk@oregonstate.edu</span></a></li>
+			<li><a href="https://github.com/kcskier" class="icon brands fa-github"><span
+						class="label">@kcskier</span></a></li>
 			<li><a href="https://www.linkedin.com/in/kendell-crocker-b2144519b"
 					class="icon brands fa-linkedin-square"><span class="label">Kendell Crocker</span></a></li>
 		</ul>
@@ -62,8 +62,7 @@
 				<h2>Work Experience</h2>
 			</header>
 
-			<!-- Job 4
-					5 -->
+			<!-- Job 5 -->
 			<header>
 				<h4>Marathon Coach, Inc.</h4>
 				<p>Coach Network Designer, June 2023 - Current</p>
@@ -136,30 +135,146 @@
 	</section>
 	<!-- End Job 1 -->
 
-	<!-- Projects --><!--
-					<header class="major">
-						<h2>Projects</h2>
-					</header>-->
+	<!-- Projects -->
+	<section id="projects" class="wrapper">
+		<div class="inner">
+			<header class="major">
+				<h2>Current Projects</h2>
+				<p>Current projects and demonstrations</p>
+			</header>
 
-	<!-- Project 1 --><!--
-					<header>
-						<h4>Brevet Checkpoint Calculator</h4>
-						<p>Software Design Class - Spring 2019</p>
-					</header>                        
-						<div class="col-6 col-12-medium">
-							<p> This was a webserver built in Python using the Flask framework, and also included some Javascrpt and HTML. </ br>
-								The server displays a page to the user that runs javascript </br>
-								to interactively provide you with times for when a brevet checkpoint should open and also close. </p>
-							</div>   
-										
-					<header>
-						<h4>Smart Home On A Budget</h4>
-						<p>Career Internship Seminar - Winter 2020</p>
-					</header>                        
-						<div class="col-6 col-12-medium">
-							<p> A simple project that was designed to mimick how smart home devices work. It is built for two raspberry pi computers, </ br>
-								one acting as a server, and another acting as a smart wall plug to turn a light on and off. </p>
-							</div> -->
+			<div class="row gtr-50 gtr-uniform">
+
+				<!-- Project 1: Black-Box VPN Endpoint -->
+				<article class="col-6 col-12-medium">
+					<!--<span class="image fit">
+						<img src="pic06.jpg" alt="Raspberry Pi Black-Box VPN Endpoint">
+					</span>-->
+					<h4>Raspberry Pi “Black-Box” VPN Endpoint</h4>
+					<p class="subtle">Portable VPN appliance running Tailscale with zero-touch updates and automated
+						subnet routing.</p>
+					<ul class="tight">
+						<li>Dockerized endpoint with management/guest tailnet separation and hardened defaults.</li>
+						<li>Zero-touch updates delivered via container images.</li>
+						<li>Automated subnet routing: On boot, identifies local subnet and publishes route to the
+							tailnet.</li>
+						<li>Authentication via <strong>Authentik</strong> (SSO) when paired with my headscale
+							control-plane project.</li>
+						</li>
+					</ul>
+					<p class="subtle"><em>Designed to integrate with my self-hosted Headscale/OIDC control plane (see
+							“Headscale + OIDC Infrastructure”).</em></p>
+					<p class="tech">
+						Authentik · Docker · Linux · Tailscale
+						<!--<p class="links">
+						<a class="button small icon fa-github" href="https://github.com/kcskier"
+							target="_blank">Repo/Notes</a>
+						<a class="button small icon fa-envelope" href="#contact">Ask for demo</a>
+					</p>-->
+				</article>
+
+				<!-- Project 2: Headscale + OIDC Infrastructure -->
+				<article class="col-6 col-12-medium">
+					<!--<span class="image fit">
+						<img src="profile.jpg" alt="Self-hosted Headscale and Authentik OIDC control plane">
+					</span>-->
+					<h4>Headscale + OIDC Infrastructure</h4>
+					<p class="subtle">Self-hosted control plane for Tailscale with SSO, role mapping, and multi-tenant
+						separation.</p>
+					<ul class="tight">
+						<li>Headscale deployment for device coordination and policy control via ACLs.</li>
+						<li>OIDC via <strong>Authentik</strong> for SSO.</li>
+						<li>Multi-tailnet separation (management and guest) with ACL/tag isolation.</li>
+						<li>Operational dashboards and logs for audits and onboarding.</li>
+					</ul>
+					<p class="subtle"><em>Provides authentication and coordination for my other homelab infrustructure,
+							personal devices, and Black-Box VPN endpoints</em></p>
+					<p class="tech">
+						Authentik · Docker · Headscale · Linux · Tailscale
+					</p>
+					<!--<p class="links">
+						<a class="button small icon fa-github" href="https://github.com/kcskier" target="_blank">Infra
+							Notes</a>
+						<a class="button small icon fa-link" href="#projects">See Black-Box Endpoint</a>
+					</p>-->
+				</article>
+
+				<div class="col-12">
+					<hr class="project-sep">
+				</div>
+
+				<!-- Project 3 TrueNAS Scale -->
+				<article class="col-6 col-12-medium">
+					<!--<span class="image fit">
+					<img src="pic06.jpg" alt="TrueNAS and 10 GbE homelab">
+				</span>-->
+					<h4>TrueNAS SCALE Storage & Services</h4>
+					<p class="subtle">Multi-node ZFS storage and services with 10 GbE backbone and throughput
+						tuning.</p>
+					<ul class="tight">
+						<li>SMB/NFS shares for Windows & Linux clients with dataset-level ACLs.</li>
+						<li>ZFS datasets with scheduled snapshotting & replication for backups and easy rollback.</li>
+						<li>App containerization platform for Nextcloud, Plex, Authentik, and more.</li>
+					</ul>
+					<p class="tech">
+						TrueNAS SCALE · ZFS · SMB/NFS · Docker · Linux · Nextcloud · Authentik
+					</p>
+					<!--<p class="links">
+						<a class="button small icon fa-github" href="https://github.com/kcskier"
+							target="_blank">Configs</a>
+					</p>-->
+				</article>
+
+				<!-- Project 4 Automated Sprinkler System -->
+				<article class="col-6 col-12-medium">
+					<!--<span class="image fit">
+					<img src="pic06.jpg" alt="TrueNAS and 10 GbE homelab">
+				</span>-->
+					<h4>Python-Based Sprinkler System</h4>
+					<p class="subtle">Weather-aware irrigation with zone-control, python scripting, and Home Assistant
+						integration</p>
+					<ul class="tight">
+						<li>Custom built sprinkler control stations based on the ShellyX platform.</li>
+						<li>Python control script: NOAA/NWS weather checks, pressure sensing, and per-zone run times.</li>
+						<li>Integration with Home Assistant for scheduling, automation, and notification services.</li>
+					</ul>
+					<p class="tech">
+						Home Assistant · Shelly · Python · NOAA/NWS API
+					</p>
+					<!--<p class="links">
+						<a class="button small icon fa-github" href="https://github.com/kcskier"
+							target="_blank">Configs</a>
+					</p>-->
+				</article>
+
+				<div class="col-12">
+					<hr class="project-sep">
+				</div>
+
+				<!-- Project 5 Home Assistant -->
+				<article class="col-6 col-12-medium">
+					<!--<span class="image fit">
+					<img src="pic06.jpg" alt="TrueNAS and 10 GbE homelab">
+				</span>-->
+					<h4>Home Assistant</h4>
+					<p class="subtle">Home Automation platform for unifying smart home devices.</p>
+					<ul class="tight">
+						<li>Integration with Sprinkler Program, proving scheduling, and historical data.</li>
+						<li>Multiple IoT networks: Zigbee, Z-Wave, and Wi-Fi devices under a single automation platform.</li>
+						<li>Presence detection, quiet hours, and automation of lighting, vacuums, and other smart devices.</li>
+					</ul>
+					<p class="tech">
+						Home Assistant · Shelly · Zigbee · ZWave · MQTT
+					</p>
+					<!--<p class="links">
+						<a class="button small icon fa-github" href="https://github.com/kcskier"
+							target="_blank">Configs</a>
+					</p>-->
+				</article>
+
+			</div>
+		</div>
+	</section>
 
 	<!-- Four - Education, Certs, Skills -->
 	<section id="three" class="wrapper">
@@ -176,6 +291,14 @@
 					</li>
 				</ul>
 			</header>
+			<header>
+				<ul>
+					<li>
+						<h4>Associate of Science - Computer Science</h4>
+						<p>Lane Community College, Eugene, Oregon - June 2019</p>
+					</li>
+				</ul>
+			</header>
 
 			<!-- Certifictaions -->
 			<header class="major">
@@ -189,17 +312,20 @@
 						<p>Expected 2025, Microsoft Corporation</p>
 					</li>-->
 					<li>
-						<h4><a href="https://learn.microsoft.com/en-us/credentials/certifications/exams/az-800/" target="_blank">Administering Windows Server Hybrid Core Infrastructure
+						<h4><a href="https://learn.microsoft.com/en-us/credentials/certifications/exams/az-800/"
+								target="_blank">Administering Windows Server Hybrid Core Infrastructure
 								(AZ-800)</a></h4>
 						<p>Expected August 2025, Microsoft Corporation</p>
 					</li>
 					<li>
-						<h4><a href="https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/?practice-assessment-type=certification" target="_blank">Microsoft Certified: Azure Fundamentals
+						<h4><a href="https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/?practice-assessment-type=certification"
+								target="_blank">Microsoft Certified: Azure Fundamentals
 								(AZ-900)</a></h4>
 						<p>May 2025, Microsoft Corporation</p>
 					</li>
 					<li>
-						<h4><a href="https://www.cisco.com/site/us/en/learn/training-certifications/certifications/enterprise/ccna/index.html" target="_blank">Cisco Certified Network Associate
+						<h4><a href="https://www.cisco.com/site/us/en/learn/training-certifications/certifications/enterprise/ccna/index.html"
+								target="_blank">Cisco Certified Network Associate
 								(CCNA)</a></h4>
 						<p>March 2025, Cisco Systems, Inc.</p>
 					</li>
@@ -214,7 +340,7 @@
 						<p>Audinate - May 2023</p>
 					</li>
 				</ul>
-				
+
 			</header>
 
 			<!-- Related Skills -->
