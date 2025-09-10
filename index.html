@@ -33,7 +33,7 @@
 			<ul class="actions">
 				<li><a href="#projects" class="button scrolly">Projects</a></li>
 				<li><a href="#experience" class="button scrolly">Experience</a></li>
-				<li><a href="#education" class="button scrolly">Education &amp; Certs</a></li>
+				<li><a href="#certs" class="button scrolly">Education & Certs</a></li>
 				<li><a href="#contact" class="button scrolly">Contact</a></li>
 			</ul>
 		</div>
@@ -41,7 +41,34 @@
 		</div>
 	</header>
 
-	<!-- Three - Projects -->
+	<!-- Bio and contact -->
+	<section id="contact" class="wrapper style2 special">
+		<header class="major">
+			<h2>Contact Information</h2>
+		</header>
+		<ul class="icons labeled">
+			<li><a href="mailto:kendell.crocker@protonmail.com" class="icon label fa-envelope"><span
+						class="label">kendell.crocker@protonmail.com</span></a></li>
+			<li><a href="https://github.com/kcskier" class="icon brands fa-github"><span
+						class="label">@kcskier</span></a></li>
+			<li><a href="https://www.linkedin.com/in/kendell-crocker-b2144519b"
+					class="icon brands fa-linkedin-square"><span class="label">Kendell Crocker</span></a></li>
+		</ul>
+		<ul class="icons labeled" style="margin-top: 1rem;">
+			<li>
+				<a href="Kendell Crocker Resume.pdf" class="icon label fa-file-pdf-o" target="_blank" rel="noopener"
+					download="Kendell_Crocker_Resume.pdf">
+					<span class="label">Resume Download</span>
+				</a>
+			</li>
+		</ul>
+		<!--<ul class="icons labeled">
+                    <li><a href="https://bitbucket.org/kcskier/profile/repositories" class="icon brands fa-bitbucket"><span class="label">Kendell Crocker</span></a></li>
+                    <li><a href="https://github.com/kcskier" class="icon brands fa-github"><span class="label">@kcskier</span></a></li>
+                </ul>-->
+	</section>
+
+	<!-- Projects -->
 	<section id="projects" class="wrapper">
 		<div class="inner">
 
@@ -120,6 +147,44 @@
 				<hr class="project-sep">
 			</div>
 
+			<!-- Kubernetes (K3s) Cluster Demos -->
+			<header>
+				<h4>Kubernetes (K3s) Cluster Demos</h4>
+			</header>
+			<div class="row gtr-25">
+				<div class="col-8 col-12-small">
+					<p class="subtle">Short, reproducible demos that teach and demonstrate core Kubernetes skills on a
+						lightweight k3s cluster.</p>
+					<ul class="tight">
+						<li>Provision a k3s control plane and workers with simple
+							scripts.</li>
+						<li>Steer placement with node labels, taints &amp;
+							tolerations.</li>
+						<li>Each demo has a clear goal, copy-paste commands, and a
+							cleanup step so you can rerun safely.</li>
+					</ul>
+
+					<p class="tech"><i class="fa fa-code"></i> Kubernetes · kubectl · Docker</p>
+
+					<p class="links">
+						<a class="button small" href="https://github.com/kcskier/k3s-cluster-demo" target="_blank"
+							rel="noopener">
+							<i class="fa fa-github fa-lg" aria-hidden="true" style="margin-right:.35rem;"></i>
+							View on GitHub
+						</a>
+					</p>
+				</div>
+				<div class="col-4 col-12-small">
+					<span class="image fit" style="max-width:280px; margin-left:auto;">
+						<img src="images/placeholder.png" srcset="images/placeholder.png 2x, images/placeholder.png 1x"
+							style="aspect-ratio:1/1" loading="lazy" alt="Headscale and Authentik OIDC control plane">
+					</span>
+				</div>
+			</div>
+			<div class="col-12">
+				<hr class="project-sep">
+			</div>
+
 			<!-- TrueNAS SCALE Storage & Services -->
 			<header>
 				<h4>TrueNAS SCALE Storage &amp; Services</h4>
@@ -157,7 +222,7 @@
 			</div>
 
 			<!-- Python-Based Sprinkler System -->
-			<header>
+			<!--<header>
 				<h4>Python-Based Sprinkler System</h4>
 			</header>
 			<div class="row gtr-25">
@@ -187,9 +252,10 @@
 			<div class="col-12">
 				<hr class="project-sep">
 			</div>
+		-->
 
 			<!-- Home Assistant -->
-			<header>
+			<!--<header>
 				<h4>Home Assistant</h4>
 			</header>
 			<div class="row gtr-25">
@@ -216,10 +282,10 @@
 							style="aspect-ratio:1/1" loading="lazy" alt="Headscale and Authentik OIDC control plane">
 					</span>
 				</div>
-			</div>
+			</div>-->
 	</section>
 
-	<!-- Two - Experience-->
+	<!-- Experience-->
 	<section id="experience" class="wrapper">
 		<div class="inner">
 
@@ -301,34 +367,13 @@
 	</section>
 	<!-- End Job 1 -->
 
-	<!-- Four - Education, Certs, Skills -->
-	<section id="education" class="wrapper">
+	<!-- Certifications -->
+	<section id="certs" class="wrapper">
+		<!-- Certifictaions -->
+		<header class="major">
+			<h3>Certifications</h3>
+		</header>
 		<div class="inner">
-			<!-- Education -->
-			<header class="major">
-				<h2>Education</h2>
-			</header>
-			<header>
-				<ul>
-					<li>
-						<h4>Bachelor of Science - Business Information Systems</h4>
-						<p>Oregon State University, Corvallis, Oregon - June 2024</p>
-					</li>
-				</ul>
-			</header>
-			<header>
-				<ul>
-					<li>
-						<h4>Associate of Science - Computer Science</h4>
-						<p>Lane Community College, Eugene, Oregon - June 2019</p>
-					</li>
-				</ul>
-			</header>
-
-			<!-- Certifictaions -->
-			<header class="major">
-				<h3>Certifications</h3>
-			</header>
 			<header>
 				<ul>
 					<!--<li>
@@ -367,28 +412,119 @@
 				</ul>
 
 			</header>
-
-			<!-- Related Skills -->
-			<header class="major">
-				<h3>Related Skills</h3>
-			</header>
-			<header>
-				<div class="col-6 col-12-medium">
-					<ul>
-						<li>Experience with virtual private network solutions, such as OpenVPN, IPSec, and Wireguard
-						</li>
-						<li>Familiar with a variety of Operating systems, including MacOS, Windows, Linux, and FreeBSD
-						</li>
-						<li>Setup servers for file storage, file archival, and active directory</li>
-						<li>Familiar with Docker, Git, MongoDB, and Flask</li>
-						<li>Programming background in C/C++, with additional Experience in python, HTML, and Javascript
-						</li>
-					</ul>
-				</div>
 		</div>
 	</section>
 
-	<!-- Four - Hobbies-->
+	<!-- Skills -->
+	<section id="skills" class="wrapper">
+		<div class="inner">
+			<header class="major">
+				<h2>Related Skills</h2>
+			</header>
+
+			<!-- centered container to match the rest of the page -->
+			<div style="max-width: 58rem; margin: 0 auto;">
+
+				<!-- Networking -->
+				<h4><i class="fa fa-sitemap" aria-hidden="true" style="margin-right:.4rem;"></i>Networking</h4>
+				<div style="display:flex; flex-wrap:wrap; gap:.5rem; margin:.5rem 0 1.25rem;">
+					<span class="button small">IPv4/IPv6</span>
+					<span class="button small">OpenVPN</span>
+					<span class="button small">IPsec</span>
+					<span class="button small">WireGuard</span>
+					<span class="button small">Tailscale/Headscale</span>
+					<span class="button small">Routing &amp; Switching</span>
+				</div>
+
+				<!-- Identity & Access -->
+				<h4><i class="fa fa-lock" aria-hidden="true" style="margin-right:.4rem;"></i>Identity &amp; Access</h4>
+				<div style="display:flex; flex-wrap:wrap; gap:.5rem; margin:.5rem 0 1.25rem;">
+					<span class="button small">Active Directory</span>
+					<span class="button small">GPO</span>
+					<span class="button small">SSO</span>
+					<span class="button small">OIDC</span>
+				</div>
+
+				<!-- Cloud -->
+				<h4><i class="fa fa-cloud" aria-hidden="true" style="margin-right:.4rem;"></i>Cloud</h4>
+				<div style="display:flex; flex-wrap:wrap; gap:.5rem; margin:.5rem 0 1.25rem;">
+					<span class="button small">Azure VMs</span>
+					<span class="button small">VNets</span>
+					<span class="button small">NSGs</span>
+					<span class="button small">Nextcloud</span>
+				</div>
+
+				<!-- Operating Systems -->
+				<h4><i class="fa fa-linux" aria-hidden="true" style="margin-right:.4rem;"></i>Linux &amp; Operating
+					Systems</h4>
+				<div style="display:flex; flex-wrap:wrap; gap:.5rem; margin:.5rem 0 1.25rem;">
+					<span class="button small">Windows</span>
+					<span class="button small">MacOS</span>
+					<span class="button small">Ubuntu/Debian</span>
+					<span class="button small">Alpine Linux</span>
+					<span class="button small">FreeBSD</span>
+				</div>
+
+				<!-- Containers & Orchestration -->
+				<h4><i class="fa fa-cubes" aria-hidden="true" style="margin-right:.4rem;"></i>Containers &amp;
+					Orchestration</h4>
+				<div style="display:flex; flex-wrap:wrap; gap:.5rem; margin:.5rem 0 1.25rem;">
+					<span class="button small">Docker</span>
+					<span class="button small">Compose</span>
+					<span class="button small">Kubernetes</span>
+					<!--<span class="button small">Helm</span>-->
+				</div>
+
+				<!-- Storage & Services -->
+				<h4><i class="fa fa-hdd-o" aria-hidden="true" style="margin-right:.4rem;"></i>Storage &amp; Services
+				</h4>
+				<div style="display:flex; flex-wrap:wrap; gap:.5rem; margin:.5rem 0 1.25rem;">
+					<span class="button small">ZFS</span>
+					<span class="button small">SMB</span>
+					<span class="button small">NFS</span>
+					<span class="button small">MongoDB</span>
+					<span class="button small">Snapshot & Replication</span>
+				</div>
+
+				<!-- Programming & Tools -->
+				<h4><i class="fa fa-code" aria-hidden="true" style="margin-right:.4rem;"></i>Programming &amp; Tools
+				</h4>
+				<div style="display:flex; flex-wrap:wrap; gap:.5rem; margin:.5rem 0 0;">
+					<span class="button small">Python</span>
+					<span class="button small">C/C++</span>
+					<span class="button small">HTML/JS</span>
+					<span class="button small">Git/GitHub</span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Education -->
+	<section id="education" class="wrapper">
+		<div class="inner">
+			<!-- Education -->
+			<header class="major">
+				<h2>Education</h2>
+			</header>
+			<header>
+				<ul>
+					<li>
+						<h4>Bachelor of Science - Business Information Systems</h4>
+						<p>Oregon State University, Corvallis, Oregon - June 2024</p>
+					</li>
+				</ul>
+			</header>
+			<header>
+				<ul>
+					<li>
+						<h4>Associate of Science - Computer Science</h4>
+						<p>Lane Community College, Eugene, Oregon - June 2019</p>
+					</li>
+				</ul>
+			</header>
+	</section>
+
+	<!-- Hobbies-->
 	<section id="activities" class="wrapper">
 		<div class="inner alt">
 			<header class="major">
@@ -406,53 +542,21 @@
 				and networks, eventually shaping the career path I chose.</br></br>
 				These days, in addition to building computers, I enjoy tinkering with my home lab setup, constantly
 				learning
-				and expanding my knowledge. For me, technology is more than just a profession—it’s a lifelong pursuit of
+				and expanding my knowledge. For me, technology is more than just a profession—it's a lifelong pursuit of
 				discovery, creativity, and innovation.
 				</br></br></br></br>
 
 				<span class="image right"><img src="images/pic01.jpg" alt="" /></span>
 				When I'm not working, often you'll find me enjoying the great outdoors in the beautiful state of Oregon.
-				Growing up, my parents often took my brother and I weekend trips to ski, snowshoe, hike, or ATV. I've
+				Growing up, my parents often took my brother and I on weekend trips to ski, snowshoe, hike, or ATV. I've
 				spent
 				countless hours exploring trails in the Oregon Cascade range, carving down ski slopes, and zipping down
 				the
 				Oregon coastal sand dunes.</br></br>
-				Even now, I love sharing these experiences with friends and family, whether it’s discovering new trails,
+				Even now, I love sharing these experiences with friends and family, whether it's discovering new trails,
 				planning a weekend getaway, or simply enjoying the thrill of being outdoors together.
 			</p>
 		</div>
-	</section>
-
-	<!-- One - Bio and contact -->
-	<section id="contact" class="wrapper style2 special">
-		<header class="major">
-			<h2>Contact Information</h2>
-		</header>
-		<ul class="icons labeled">
-			<li><a href="mailto:kcskier12@gmail.com" class="icon label fa-envelope"><span
-						class="label">kcskier12@gmail.com</span></a></li>
-			<li><a href="https://github.com/kcskier" class="icon brands fa-github"><span
-						class="label">@kcskier</span></a></li>
-			<li><a href="https://www.linkedin.com/in/kendell-crocker-b2144519b"
-					class="icon brands fa-linkedin-square"><span class="label">Kendell Crocker</span></a></li>
-		</ul>
-		<ul class="icons labeled">
-			<li><a href="resume.pdf" class="icon label fa-file-pdf"><span class="label">Resume Download</span></a></li>
-
-		</ul>
-		<ul class="icons labeled" style="margin-top: 1rem;">
-			<li>
-				<a href="resume.pdf" class="icon label fa-file-pdf-o" target="_blank" rel="noopener"
-					download="Kendell_Crocker_Resume.pdf">
-					<span class="label">Resume Download</span>
-				</a>
-			</li>
-		</ul>
-
-		<!--<ul class="icons labeled">
-                    <li><a href="https://bitbucket.org/kcskier/profile/repositories" class="icon brands fa-bitbucket"><span class="label">Kendell Crocker</span></a></li>
-                    <li><a href="https://github.com/kcskier" class="icon brands fa-github"><span class="label">@kcskier</span></a></li>
-                </ul>-->
 	</section>
 
 	<!-- Six -->
@@ -802,9 +906,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit
 					adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque
 					praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer
-					ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis
-					in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu
-					faucibus. Integer ac pellentesque praesent.</p>
+					ac pellentesque praesent.</p>
 			</section>
 
 		</div>
