@@ -28,7 +28,7 @@
 	<header id="header">
 		<div class="content">
 			<h1><a href="#">Kendell Crocker</a></h1>
-			<p>Systems & Networking | AD · Azure · Linux · Cloud</p>
+			<p>Simple, Dependable Technology</p>
 			<!-- Hero buttons: use "actions" to align like other sections -->
 			<ul class="actions">
 				<li><a href="#projects" class="button scrolly">Projects</a></li>
@@ -37,7 +37,8 @@
 				<li><a href="#contact" class="button scrolly">Contact</a></li>
 			</ul>
 		</div>
-		<div><img src="images/profile.jpg" alt="" /></div>
+		<div>
+			<img src="images/profile.jpg" alt="" />
 		</div>
 	</header>
 
@@ -92,18 +93,20 @@
 					</ul>
 					<p class="subtle"><em>Integrates with my self-hosted Headscale/OIDC control plane (see below).</em>
 					</p>
-					<p class="tech"><i class="fa fa-code"></i> Docker · Tailscale · Linux · Authentik</p>
+					<p class="tech"><i class="fa fa-code"></i> Docker · Tailscale · Linux</p>
 
+					<!--
 					<p class="links">
 						<a class="button small" href="https://github.com/kcskier" target="_blank" rel="noopener">
 							<i class="fa fa-github fa-lg" aria-hidden="true" style="margin-right:.35rem;"></i>
 							View on GitHub
 						</a>
 					</p>
+					-->
 				</div>
 				<div class="col-4 col-12-small">
 					<span class="image fit" style="max-width:280px; margin-left:auto;">
-						<img src="images/placeholder.png" srcset="images/placeholder.png 2x, images/placeholder.png 1x"
+						<img src="images/blackbox.jpg" srcset="images/blackbox.jpg 2x, images/blackbox.jpg 1x"
 							style="aspect-ratio:1/1" loading="lazy" alt="Headscale and Authentik OIDC control plane">
 					</span>
 				</div>
@@ -138,7 +141,8 @@
 				</div>
 				<div class="col-4 col-12-small">
 					<span class="image fit" style="max-width:280px; margin-left:auto;">
-						<img src="images/headscale_authentik_flow.png" srcset="images/headscale_authentik_flow.png 2x, images/headscale_authentik_flow.png 1x"
+						<img src="images/headscale_authentik_flow.png"
+							srcset="images/headscale_authentik_flow.png 2x, images/headscale_authentik_flow.png 1x"
 							style="aspect-ratio:1/1" loading="lazy" alt="Headscale and Authentik OIDC control plane">
 					</span>
 				</div>
@@ -185,104 +189,149 @@
 				<hr class="project-sep">
 			</div>
 
-			<!-- TrueNAS SCALE Storage & Services -->
-			<header>
-				<h4>TrueNAS SCALE Storage &amp; Services</h4>
-			</header>
-			<div class="row gtr-25">
-				<div class="col-8 col-12-small">
-					<p class="subtle">ZFS-based storage platform hosting SMB/NFS shares and self-hosted apps.</p>
-					<ul class="tight">
-						<li>SMB/NFS shares for Windows &amp; Linux with dataset-level ACLs and snapshot-backed “Previous
-							Versions”.</li>
-						<li>ZFS datasets with scheduled snapshotting &amp; replication for backups and fast rollback.
-						</li>
-						<li>App platform for Nextcloud, Plex, and Authentik via containers.</li>
-					</ul>
-					<p class="subtle"><em>Provides authentication and coordination for the portable Black-Box VPN
-							devices.</em>
-					</p>
-					<p class="tech"><i class="fa fa-code"></i> TrueNAS SCALE · ZFS · SMB/NFS · Docker · Linux ·
-						Nextcloud</p>
+			<details class="more-projects">
+				<summary class="button small">
+					<i class="fa fa-chevron-down chev" aria-hidden="true"></i>
+					<span class="label-more">More projects</span>
+					<span class="label-less">Fewer projects</span>
+				</summary>
 
-					<p class="links">
-						<a class="button small icon fa-github" href="https://github.com/kcskier" target="_blank">Infra
-							Notes</a>
-					</p>
-				</div>
-				<div class="col-4 col-12-small">
-					<span class="image fit" style="max-width:280px; margin-left:auto;">
-						<img src="images/placeholder.png" srcset="images/placeholder.png 2x, images/placeholder.png 1x"
-							style="aspect-ratio:1/1" loading="lazy" alt="Headscale and Authentik OIDC control plane">
-					</span>
-				</div>
-			</div>
-			<div class="col-12">
-				<hr class="project-sep">
-			</div>
+				<div class="row gtr-25 more-grid">
 
-			<!-- Python-Based Sprinkler System -->
-			<!--<header>
-				<h4>Python-Based Sprinkler System</h4>
-			</header>
-			<div class="row gtr-25">
-				<div class="col-8 col-12-small">
-					<p class="subtle">Weather-aware irrigation with zone control, Python scripting, and Home Assistant
-						integration.</p>
-					<ul class="tight">
-						<li>Custom control stations built on Shelly relays with manual override/service mode.</li>
-						<li>Python control script: NOAA/NWS weather checks, pressure sensing, and per-zone run times.
-						</li>
-						<li>Home Assistant dashboards, scheduling, automations, and notifications.</li>
-					</ul>
-					<p class="tech"><i class="fa fa-code"></i> Home Assistant · Shelly · Python · NOAA/NWS API</p>
+					<!-- TrueNAS SCALE -->
+					<div class="col-4 col-12-small">
+						<div class="proj-tile">
+							<!-- SVG or PNG works; SVG preferred if available -->
+							<img class="logo" src="images/truenas_scale-logo-full-color-rgb.webp" alt="TrueNAS logo"
+								loading="lazy">
+						</div>
+						<h5 style="margin:.1rem 0 .2rem;"><strong>Truenas SCALE</strong></h5>
+						<p class="subtle" style="margin:0 0 .4rem;">ZFS snapshot & replication</p>
+						<p class="subtle" style="margin:0 0 .4rem;">App Hosting</p>
+						<p class="subtle" style="margin:0 0 .4rem;">Storage and data services</p>
+						<p class="tech" style="margin:0 0 .4rem;"><i class="fa fa-code"></i> ZFS · SMB/NFS · App
+							Platform</p>
+						<!--
+						<p class="links" style="margin:0;"><a class="button small icon fa-external-link" href="#"
+								target="_blank" rel="noopener">Notes</a></p>
+						-->
+					</div>
 
-					<p class="links">
-						<a class="button small icon fa-github" href="https://github.com/kcskier" target="_blank">Infra
-							Notes</a>
-					</p>
-				</div>
-				<div class="col-4 col-12-small">
-					<span class="image fit" style="max-width:280px; margin-left:auto;">
-						<img src="images/placeholder.png" srcset="images/placeholder.png 2x, images/placeholder.png 1x"
-							style="aspect-ratio:1/1" loading="lazy" alt="Headscale and Authentik OIDC control plane">
-					</span>
-				</div>
-			</div>
-			<div class="col-12">
-				<hr class="project-sep">
-			</div>
-		-->
+					<!-- Python Sprinklers -->
+					<div class="col-4 col-12-small">
+						<div class="proj-tile">
+							<!-- SVG or PNG works; SVG preferred if available -->
+							<img class="logo" src="images/placeholder.png" alt="python sprinklers" loading="lazy">
+						</div>
+						<h5 style="margin:.1rem 0 .2rem;"><strong>Python-Based Sprinkler System</strong></h5>
+						<p class="subtle" style="margin:0 0 .4rem;">Weather-aware zone control</p>
+						<p class="subtle" style="margin:0 0 .4rem;">Custom-built control stations</p>
+						<p class="subtle" style="margin:0 0 .4rem;">Integration with Home Assistant</p>
+						<p class="tech" style="margin:0 0 .4rem;"><i class="fa fa-code"></i> Python · NOAA/NWS API ·
+							Shelly</p>
+						<!--
+						<p class="links" style="margin:0;"><a class="button small icon fa-external-link" href="#"
+								target="_blank" rel="noopener">Notes</a></p>
+						-->
+					</div>
 
-			<!-- Home Assistant -->
-			<!--<header>
-				<h4>Home Assistant</h4>
-			</header>
-			<div class="row gtr-25">
-				<div class="col-8 col-12-small">
-					<p class="subtle">Unified automations for presence, safety, and convenience—backed by a resilient HA
-						config.</p>
-					<ul class="tight">
-						<li>Integration with the sprinkler system, providing schedules, rain delays, and run history.
-						</li>
-						<li>Multiple IoT networks: Zigbee, Z-Wave, and Wi-Fi under a single automation platform.</li>
-						<li>Presence detection, quiet hours, and automation of lighting, vacuums, and other smart
-							devices.</li>
-					</ul>
-					<p class="tech"><i class="fa fa-code"></i> Home Assistant · Shelly · Zigbee · Z-Wave · MQTT</p>
+					<!-- Home Assistant -->
+					<div class="col-4 col-12-small">
+						<div class="proj-tile">
+							<!-- SVG or PNG works; SVG preferred if available -->
+							<img class="logo" src="images/ha_icon.png" alt="Home Assistant logo" loading="lazy">
+						</div>
+						<h5 style="margin:.1rem 0 .2rem;"><strong>Home Assistant</strong></h5>
+						<p class="subtle" style="margin:0 0 .4rem;">Unified Home Automation Platform</p>
+						<p class="subtle" style="margin:0 0 .4rem;">IoT - Zigbee, Z-Wave, Wi-Fi devices</p>
+						<p class="subtle" style="margin:0 0 .4rem;">Whole Home Automation</p>
+						<p class="tech" style="margin:0 0 .4rem;"><i class="fa fa-code"></i> Shelly · Zigbee · Z-Wave ·
+							MQTT</p>
+						<!--
+						<p class="links" style="margin:0;"><a class="button small icon fa-external-link" href="#"
+								target="_blank" rel="noopener">Notes</a></p>
+						-->
+					</div>
+				</div>
+			</details>
+		</div>
 
-					<p class="links">
-						<a class="button small icon fa-github" href="https://github.com/kcskier" target="_blank">Infra
-							Notes</a>
-					</p>
-				</div>
-				<div class="col-4 col-12-small">
-					<span class="image fit" style="max-width:280px; margin-left:auto;">
-						<img src="images/placeholder.png" srcset="images/placeholder.png 2x, images/placeholder.png 1x"
-							style="aspect-ratio:1/1" loading="lazy" alt="Headscale and Authentik OIDC control plane">
-					</span>
-				</div>
-			</div>-->
+		<style>
+			/* square, centered tile */
+			.proj-tile {
+				aspect-ratio: 1/1;
+				background: #f5f7fa;
+				border-radius: 8px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-bottom: .6rem;
+				overflow: hidden;
+			}
+
+			/* use for logos/marks */
+			.proj-tile img.logo {
+				width: 72%;
+				height: 72%;
+				object-fit: contain;
+			}
+
+			/* use for photos/screens */
+			.proj-tile img.photo {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+
+			/* Clean summary and center it */
+			details.more-projects {
+				margin-top: 1rem;
+				text-align: center;
+			}
+
+			details.more-projects>summary {
+				list-style: none;
+			}
+
+			details.more-projects>summary::-webkit-details-marker {
+				display: none;
+			}
+
+			/* Make summary look/behave like a button */
+			details.more-projects>summary.button {
+				display: inline-flex;
+				align-items: center;
+				gap: .5rem;
+				margin: 0 auto;
+			}
+
+			/* Toggle labels + chevron */
+			details.more-projects>summary .label-less {
+				display: none;
+			}
+
+			details.more-projects[open]>summary .label-more {
+				display: none;
+			}
+
+			details.more-projects[open]>summary .label-less {
+				display: inline;
+			}
+
+			details.more-projects>summary .chev {
+				transition: transform .2s ease;
+			}
+
+			details.more-projects[open]>summary .chev {
+				transform: rotate(180deg);
+			}
+
+			/* Optional: a little space above the grid when open */
+			details.more-projects[open] .more-grid {
+				margin-top: 1rem;
+			}
+		</style>
+
 	</section>
 
 	<!-- Experience-->
@@ -526,7 +575,7 @@
 				<div class="col-12" style="margin-bottom:2.25rem;">
 					<div class="row gtr-15" style="align-items:center;">
 						<div class="col-3 col-12-small" style="text-align:center;">
-							<img src="images/lane-logo-vertical-black.png" alt="Lane Community College logo"
+							<img src="images/lane-logo-vertical-2-color.png" alt="Lane Community College logo"
 								style="max-height:84px; max-width:100%; height:auto; display:inline-block; border:0; box-shadow:none;">
 						</div>
 						<div class="col-9 col-12-small edu-text">
