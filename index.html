@@ -25,6 +25,109 @@
 		href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.4.47/css/materialdesignicons.min.css">
 </head>
 
+<style>
+	/* ---------- Mobile fixes ---------- */
+	@media (max-width: 768px) {
+
+		/* Let buttons wrap INSIDE the pill and keep them centered */
+		.button,
+		a.button,
+		.actions .button,
+		.links .button,
+		details.more-projects>summary.button {
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			padding: .65rem 1rem;
+			line-height: 1.15;
+			white-space: normal;
+			/* allow wrapping instead of spilling out */
+			max-width: 90vw;
+			/* keep inside the viewport */
+			box-sizing: border-box;
+		}
+
+		.button.icon:before {
+			margin-right: .5rem;
+		}
+
+		/* room for icons */
+
+		/* Center button containers */
+		.actions,
+		.links,
+		details.more-projects {
+			text-align: center;
+		}
+
+		/* Make sure each mini-card reads centered when stacked */
+		.row .col-12-small h5,
+		.row .col-12-small p {
+			text-align: center;
+		}
+	}
+
+
+	/* Center project images when the column stacks on small screens */
+	@media (max-width: 980px) {
+		.col-12-small>.image.fit {
+			display: block !important;
+			margin: 0 auto !important;
+			/* overrides inline margin-left:auto */
+		}
+
+		.col-12-small>.image.fit img {
+			display: block;
+			margin: 0 auto;
+			/* keep the actual image centered too */
+		}
+	}
+
+	/* More projects — make tiles compact & centered on phones */
+	@media (max-width: 980px) {
+
+		.more-grid .col-4,
+		.more-grid .col-12-small {
+			text-align: center;
+		}
+
+		/* cap the square tile size and center it */
+		.more-grid .proj-tile {
+			width: 100%;
+			max-width: 320px;
+			/* match your other project images */
+			margin: 0 auto .6rem;
+			/* center */
+			aspect-ratio: 1 / 1;
+			/* keep it square */
+			overflow: hidden;
+			/* avoid logo spill */
+		}
+
+		/* keep logos nicely contained inside the square */
+		.more-grid .proj-tile img.logo {
+			width: 72%;
+			height: 72%;
+			object-fit: contain;
+		}
+
+		/* if any tile uses a photo instead of a logo */
+		.more-grid .proj-tile img.photo {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	/* very small phones: nudge down a bit more */
+	@media (max-width: 400px) {
+		.more-grid .proj-tile {
+			max-width: 280px;
+		}
+	}
+</style>
+
+
 <body class="is-preload">
 
 	<!-- Header -->
@@ -86,15 +189,16 @@
 			</header>
 			<div class="row gtr-25">
 				<div class="col-8 col-12-small">
-					<p class="subtle">Portable VPN appliance running Tailscale with zero-touch updates and automated
+					<p class="subtle">Portable VPN appliance running Tailscale with zero-touch<br>updates and automated
 						subnet routing.</p>
 					<ul class="tight">
-						<li>Dockerized endpoint with management/guest separation and hardened defaults.</li>
+						<li>Dockerized endpoint with management/guest separation<br>and hardened defaults.</li>
 						<li>Zero-touch updates delivered via container images.</li>
-						<li>Authentication via <strong>Authentik</strong> when paired with my Headscale control
+						<li>Authentication via <strong>Authentik</strong> when paired with<br>my Headscale control
 							plane.</li>
 					</ul>
-					<p class="subtle"><em>Integrates with my self-hosted Headscale/OIDC control plane (see below).</em>
+					<p class="subtle"><em>Integrates with my self-hosted Headscale/OIDC control plane<br>(see
+							below).</em>
 					</p>
 					<p class="tech"><i class="fa fa-code"></i> Docker · Tailscale · Linux</p>
 
@@ -124,15 +228,15 @@
 			</header>
 			<div class="row gtr-25">
 				<div class="col-8 col-12-small">
-					<p class="subtle">Self-hosted control plane for Tailscale with SSO, role mapping, and multi-tenant
+					<p class="subtle">Self-hosted control plane for Tailscale with SSO,<br> mapping, and multi-tenant
 						separation.</p>
 					<ul class="tight">
-						<li>Headscale deployment for device coordination and policy control via ACLs.</li>
+						<li>Headscale deployment for device coordination and<br>policy control via ACLs.</li>
 						<li>OIDC via <strong>Authentik</strong> for SSO and role-based access.</li>
-						<li>Multi-tailnet separation (management &amp; guest) with ACL/tag isolation.</li>
+						<li>Multi-tailnet separation (management &amp; guest) with<br>ACL/tag isolation.</li>
 						<li>Operational dashboards and logs for audits and onboarding.</li>
 					</ul>
-					<p class="subtle"><em>Provides authentication and coordination for the portable Black-Box VPN
+					<p class="subtle"><em>Provides authentication and coordination for<br>the portable Black-Box VPN
 							devices.</em>
 					</p>
 					<p class="tech"><i class="fa fa-code"></i> Headscale · Tailscale · Authentik · Docker · Linux</p>
@@ -160,7 +264,7 @@
 			</header>
 			<div class="row gtr-25">
 				<div class="col-8 col-12-small">
-					<p class="subtle">Short, reproducible demos that teach and demonstrate core Kubernetes skills on a
+					<p class="subtle">Short, reproducible demos that teach and demonstrate core<br>skills on a
 						lightweight k3s cluster.</p>
 					<ul class="tight">
 						<li>Provision a k3s control plane and workers with simple
@@ -417,31 +521,6 @@
 			</div>
 	</section>
 	<!-- End Job 1 -->
-
-	<!-- Projects --><!--
-					<header class="major">
-						<h2>Projects</h2>
-					</header>-->
-
-	<!-- Project 1 --><!--
-					<header>
-						<h4>Brevet Checkpoint Calculator</h4>
-						<p>Software Design Class - Spring 2019</p>
-					</header>                        
-						<div class="col-6 col-12-medium">
-							<p> This was a webserver built in Python using the Flask framework, and also included some Javascrpt and HTML. </ br>
-								The server displays a page to the user that runs javascript </br>
-								to interactively provide you with times for when a brevet checkpoint should open and also close. </p>
-							</div>   
-										
-					<header>
-						<h4>Smart Home On A Budget</h4>
-						<p>Career Internship Seminar - Winter 2020</p>
-					</header>                        
-						<div class="col-6 col-12-medium">
-							<p> A simple project that was designed to mimick how smart home devices work. It is built for two raspberry pi computers, </ br>
-								one acting as a server, and another acting as a smart wall plug to turn a light on and off. </p>
-							</div> -->
 
 	<!-- Four - Education, Certs, Skills -->
 	<section id="three" class="wrapper">
@@ -1027,6 +1106,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 		</div>
 	</section>
 	-->
+
 	<!-- Footer with Contact Me button -->
 	<footer style="text-align:center; padding:30px;">
 		<a href="#contact" class="button scrolly">Contact Me</a>
