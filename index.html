@@ -20,6 +20,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+	<!-- Sprinkler Icon -->
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.4.47/css/materialdesignicons.min.css">
 </head>
 
 <body class="is-preload">
@@ -28,33 +31,313 @@
 	<header id="header">
 		<div class="content">
 			<h1><a href="#">Kendell Crocker</a></h1>
-			<p>Building, Connecting, Exploring</p>
+			<p>Simple, Dependable Technology</p>
+			<!-- Hero buttons: use "actions" to align like other sections -->
+			<ul class="actions">
+				<li><a href="#projects" class="button scrolly">Projects</a></li>
+				<li><a href="#experience" class="button scrolly">Experience</a></li>
+				<li><a href="#education" class="button scrolly">Education & Certs</a></li>
+				<li><a href="#contact" class="button scrolly">Contact</a></li>
+			</ul>
 		</div>
-		<div><img src="images/profile.jpg" alt="" /></div>
+		<div>
+			<img src="images/profile.jpg" alt="" />
 		</div>
 	</header>
 
-	<!-- One - Bio and contact -->
-	<section id="one" class="wrapper style2 special">
+	<!-- Bio and contact -->
+	<section id="contact" class="wrapper style2 special">
 		<header class="major">
-			<h2>Contact Information</h2>
+			<h2>Contact</h2>
 		</header>
 		<ul class="icons labeled">
-			<li><a href="mailto:kcskier12@gmail.com" class="icon label fa-envelope"><span
-						class="label">kcskier12@gmail.com</span></a></li>
+			<li><a href="mailto:kendell.crocker@protonmail.com" class="icon label fa-envelope"><span
+						class="label">kendell.crocker@protonmail.com</span></a></li>
 			<li><a href="https://github.com/kcskier" class="icon brands fa-github"><span
 						class="label">@kcskier</span></a></li>
 			<li><a href="https://www.linkedin.com/in/kendell-crocker-b2144519b"
 					class="icon brands fa-linkedin-square"><span class="label">Kendell Crocker</span></a></li>
 		</ul>
+		<ul class="icons labeled" style="margin-top: 1rem;">
+			<li>
+				<a href="Kendell Crocker Resume.pdf" class="icon label fa-file-pdf-o" target="_blank" rel="noopener"
+					download="Kendell_Crocker_Resume.pdf">
+					<span class="label">Resume Download</span>
+				</a>
+			</li>
+		</ul>
 		<!--<ul class="icons labeled">
                     <li><a href="https://bitbucket.org/kcskier/profile/repositories" class="icon brands fa-bitbucket"><span class="label">Kendell Crocker</span></a></li>
                     <li><a href="https://github.com/kcskier" class="icon brands fa-github"><span class="label">@kcskier</span></a></li>
-        </ul>-->
+                </ul>-->
 	</section>
 
-	<!-- Two - Experience-->
-	<section id="two" class="wrapper">
+	<!-- Projects -->
+	<section id="projects" class="wrapper">
+		<div class="inner">
+
+			<header class="major">
+				<h2>Projects</h2>
+			</header>
+
+			<!-- Black-Box -->
+			<header>
+				<h4>Raspberry Pi “Black-Box” VPN Endpoint</h4>
+			</header>
+			<div class="row gtr-25">
+				<div class="col-8 col-12-small">
+					<p class="subtle">Portable VPN appliance running Tailscale with zero-touch updates and automated
+						subnet routing.</p>
+					<ul class="tight">
+						<li>Dockerized endpoint with management/guest separation and hardened defaults.</li>
+						<li>Zero-touch updates delivered via container images.</li>
+						<li>Authentication via <strong>Authentik</strong> when paired with my Headscale control
+							plane.</li>
+					</ul>
+					<p class="subtle"><em>Integrates with my self-hosted Headscale/OIDC control plane (see below).</em>
+					</p>
+					<p class="tech"><i class="fa fa-code"></i> Docker · Tailscale · Linux</p>
+
+					<!--
+					<p class="links">
+						<a class="button small" href="https://github.com/kcskier" target="_blank" rel="noopener">
+							<i class="fa fa-github fa-lg" aria-hidden="true" style="margin-right:.35rem;"></i>
+							View on GitHub
+						</a>
+					</p>
+					-->
+				</div>
+				<div class="col-4 col-12-small">
+					<span class="image fit" style="max-width:280px; margin-left:auto;">
+						<img src="images/blackbox.jpg" srcset="images/blackbox.jpg 2x, images/blackbox.jpg 1x"
+							style="aspect-ratio:1/1" loading="lazy" alt="Raspberry Pi 'Black-Box' VPN endpoint">
+					</span>
+				</div>
+			</div>
+			<div class="col-12">
+				<hr class="project-sep">
+			</div>
+
+			<!-- Headscale + OIDC Infrastructure -->
+			<header>
+				<h4>Headscale + OIDC Infrastructure</h4>
+			</header>
+			<div class="row gtr-25">
+				<div class="col-8 col-12-small">
+					<p class="subtle">Self-hosted control plane for Tailscale with SSO, role mapping, and multi-tenant
+						separation.</p>
+					<ul class="tight">
+						<li>Headscale deployment for device coordination and policy control via ACLs.</li>
+						<li>OIDC via <strong>Authentik</strong> for SSO and role-based access.</li>
+						<li>Multi-tailnet separation (management &amp; guest) with ACL/tag isolation.</li>
+						<li>Operational dashboards and logs for audits and onboarding.</li>
+					</ul>
+					<p class="subtle"><em>Provides authentication and coordination for the portable Black-Box VPN
+							devices.</em>
+					</p>
+					<p class="tech"><i class="fa fa-code"></i> Headscale · Tailscale · Authentik · Docker · Linux</p>
+
+					<!--<p class="links">
+						<a class="button small icon fa-github" href="https://github.com/kcskier" target="_blank">Infra
+							Notes</a>
+					</p>-->
+				</div>
+				<div class="col-4 col-12-small">
+					<span class="image fit" style="max-width:280px; margin-left:auto;">
+						<img src="images/headscale_authentik_flow.png"
+							srcset="images/headscale_authentik_flow.png 2x, images/headscale_authentik_flow.png 1x"
+							style="aspect-ratio:1/1" loading="lazy" alt="Headscale and Authentik OIDC control plane">
+					</span>
+				</div>
+			</div>
+			<div class="col-12">
+				<hr class="project-sep">
+			</div>
+
+			<!-- Kubernetes (K3s) Cluster Demos -->
+			<header>
+				<h4>Kubernetes (K3s) Cluster Demos</h4>
+			</header>
+			<div class="row gtr-25">
+				<div class="col-8 col-12-small">
+					<p class="subtle">Short, reproducible demos that teach and demonstrate core Kubernetes skills on a
+						lightweight k3s cluster.</p>
+					<ul class="tight">
+						<li>Provision a k3s control plane and workers with simple
+							scripts.</li>
+						<li>Steer placement with node labels, taints &amp;
+							tolerations.</li>
+						<li>Each demo has a clear goal, copy-paste commands, and a
+							cleanup step so you can rerun safely.</li>
+					</ul>
+
+					<p class="tech"><i class="fa fa-code"></i> Kubernetes · kubectl · Docker</p>
+
+					<p class="links">
+						<a class="button small" href="https://github.com/kcskier/k3s-cluster-demo" target="_blank"
+							rel="noopener">
+							<i class="fa fa-github fa-lg" aria-hidden="true" style="margin-right:.35rem;"></i>
+							View on GitHub
+						</a>
+					</p>
+				</div>
+				<div class="col-4 col-12-small">
+					<span class="image fit" style="max-width:280px; margin-left:auto;">
+						<img src="images/k3s_demo.png" srcset="images/k3s_demo.png 2x, images/k3s_demo.png 1x"
+							style="aspect-ratio:1/1" loading="lazy"
+							alt="kubectl output showing deployment, service, and pods on a k3s demo cluster">
+					</span>
+				</div>
+			</div>
+			<div class="col-12">
+				<hr class="project-sep">
+			</div>
+
+			<details class="more-projects">
+				<summary class="button small">
+					<i class="fa fa-chevron-down chev" aria-hidden="true"></i>
+					<span class="label-more">More projects</span>
+					<span class="label-less">Fewer projects</span>
+				</summary>
+
+				<div class="row gtr-25 more-grid">
+
+					<!-- TrueNAS SCALE -->
+					<div class="col-4 col-12-small">
+						<div class="proj-tile">
+							<!-- SVG or PNG works; SVG preferred if available -->
+							<img class="logo" src="images/truenas_scale-logo-full-color-rgb.webp" alt="TrueNAS logo"
+								loading="lazy">
+						</div>
+						<h5 style="margin:.1rem 0 .2rem;"><strong>TrueNAS SCALE</strong></h5>
+						<p class="subtle" style="margin:0 0 .4rem;">ZFS snapshots & replication</p>
+						<p class="subtle" style="margin:0 0 .4rem;">App Hosting</p>
+						<p class="subtle" style="margin:0 0 .4rem;">Storage and data services</p>
+						<p class="tech" style="margin:0 0 .4rem;"><i class="fa fa-code"></i> ZFS · SMB/NFS · App
+							Platform</p>
+						<!--
+						<p class="links" style="margin:0;"><a class="button small icon fa-external-link" href="#"
+								target="_blank" rel="noopener">Notes</a></p>
+						-->
+					</div>
+
+					<!-- Python Sprinklers (with MDI sprinkler icon) -->
+					<div class="col-4 col-12-small">
+						<div class="proj-tile" role="img" aria-label="Sprinkler project" style="aspect-ratio:1/1; background:#f5f7fa; border-radius:8px;
+              display:flex; align-items:center; justify-content:center; margin-bottom:.6rem;">
+							<span class="mdi mdi-sprinkler-variant mdi-48px" style="color:#97a0aa;"
+								aria-hidden="true"></span>
+						</div>
+
+						<h5 style="margin:.1rem 0 .2rem;"><strong>Python-Based Sprinkler System</strong></h5>
+						<p class="subtle" style="margin:0 0 .4rem;">Weather-aware zone control</p>
+						<p class="subtle" style="margin:0 0 .4rem;">Custom-built control stations</p>
+						<p class="subtle" style="margin:0 0 .4rem;">Integration with Home Assistant</p>
+						<p class="tech" style="margin:0 0 .4rem;"><i class="fa fa-code"></i> Python · NOAA/NWS API ·
+							Shelly</p>
+					</div>
+
+					<!-- Home Assistant -->
+					<div class="col-4 col-12-small">
+						<div class="proj-tile">
+							<!-- SVG or PNG works; SVG preferred if available -->
+							<img class="logo" src="images/ha_icon.png" alt="Home Assistant logo" loading="lazy">
+						</div>
+						<h5 style="margin:.1rem 0 .2rem;"><strong>Home Assistant</strong></h5>
+						<p class="subtle" style="margin:0 0 .4rem;">Unified Home Automation Platform</p>
+						<p class="subtle" style="margin:0 0 .4rem;">IoT - Zigbee, Z-Wave, Wi-Fi devices</p>
+						<p class="subtle" style="margin:0 0 .4rem;">Whole Home Automation</p>
+						<p class="tech" style="margin:0 0 .4rem;"><i class="fa fa-code"></i> Shelly · Zigbee · Z-Wave ·
+							MQTT</p>
+						<!--
+						<p class="links" style="margin:0;"><a class="button small icon fa-external-link" href="#"
+								target="_blank" rel="noopener">Notes</a></p>
+						-->
+					</div>
+				</div>
+			</details>
+		</div>
+
+		<style>
+			/* square, centered tile */
+			.proj-tile {
+				aspect-ratio: 1/1;
+				background: #f5f7fa;
+				border-radius: 8px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin-bottom: .6rem;
+				overflow: hidden;
+			}
+
+			/* use for logos/marks */
+			.proj-tile img.logo {
+				width: 72%;
+				height: 72%;
+				object-fit: contain;
+			}
+
+			/* use for photos/screens */
+			.proj-tile img.photo {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+
+			/* Clean summary and center it */
+			details.more-projects {
+				margin-top: 1rem;
+				text-align: center;
+			}
+
+			details.more-projects>summary {
+				list-style: none;
+			}
+
+			details.more-projects>summary::-webkit-details-marker {
+				display: none;
+			}
+
+			/* Make summary look/behave like a button */
+			details.more-projects>summary.button {
+				display: inline-flex;
+				align-items: center;
+				gap: .5rem;
+				margin: 0 auto;
+			}
+
+			/* Toggle labels + chevron */
+			details.more-projects>summary .label-less {
+				display: none;
+			}
+
+			details.more-projects[open]>summary .label-more {
+				display: none;
+			}
+
+			details.more-projects[open]>summary .label-less {
+				display: inline;
+			}
+
+			details.more-projects>summary .chev {
+				transition: transform .2s ease;
+			}
+
+			details.more-projects[open]>summary .chev {
+				transform: rotate(180deg);
+			}
+
+			/* Optional: a little space above the grid when open */
+			details.more-projects[open] .more-grid {
+				margin-top: 1rem;
+			}
+		</style>
+
+	</section>
+
+	<!-- Experience-->
+	<section id="experience" class="wrapper">
 		<div class="inner">
 
 			<!--Work Experience-->
@@ -62,15 +345,14 @@
 				<h2>Work Experience</h2>
 			</header>
 
-			<!-- Job 4
-					5 -->
+			<!-- Job 5 -->
 			<header>
 				<h4>Marathon Coach, Inc.</h4>
-				<p>Coach Network Designer, June 2023 - Current</p>
+				<p>Coach Network Designer, June 2023 - Present</p>
 			</header>
 			<div class="col-6 col-12-medium">
 				<ul>
-					<li>Design, maintain and oversee installation of coach networking systems</li>
+					<li>Design, maintain, and oversee installation of coach networking systems</li>
 					<li>Provide technical support for production teams, multiple service centers, and customers. </li>
 					<li>Research and develop innovative networking solutions to enhance connectivity between<br>support
 						teams and customers on motor coaches.</li>
@@ -85,9 +367,9 @@
 			</header>
 			<div class="col-6 col-12-medium">
 				<ul>
-					<li>Design, install, and maintain campus wide computer networks</li>
+					<li>Design, install, and maintain campus-wide computer networks</li>
 					<li>Provided technical on-call support to staff and volunteers</li>
-					<li>Designed, built and oversaw a live produciton environment including<br>audio mixing, video
+					<li>Designed, built, and oversaw a live producton environment including<br>audio mixing, video
 						production and live stream components.</li>
 				</ul>
 			</div>
@@ -100,7 +382,7 @@
 			</header>
 			<div class="col-6 col-12-medium">
 				<ul>
-					<li>Worked with remote support to provide solve equipment issues</li>
+					<li>Worked with remote support to diagnose and resolve equipment issues</li>
 					<li>Provided on-call support to clients</li>
 					<li>Maintained and inventoried communication systems for clients</li>
 				</ul>
@@ -114,9 +396,9 @@
 			</header>
 			<div class="col-6 col-12-medium">
 				<ul>
-					<li>Provide world class service and advice to customers</li>
-					<li>Maintain computer systems and Point Of Sale software for store operations</li>
-					<li>Coordinate with co-workers for setup of sale and promotional events</li>
+					<li>Provided world-class service and advice to customers</li>
+					<li>Maintained computer systems and Point Of Sale software for store operations</li>
+					<li>Coordinated with coworkers for setup of sales and promotional events</li>
 				</ul>
 			</div>
 			<!-- End Job 2 -->
@@ -128,9 +410,9 @@
 			</header>
 			<div class="col-6 col-12-medium">
 				<ul>
-					<li>Training and supervision of sound team</li>
-					<li>Oversee regular weekend services and other performace events</li>
-					<li>Maintain and provide support for sound equipment</li>
+					<li>Trained and supervised the sound team</li>
+					<li>Oversaw regular weekend services and other performace events</li>
+					<li>Maintained and provided support for sound equipment</li>
 				</ul>
 			</div>
 	</section>
@@ -161,29 +443,133 @@
 								one acting as a server, and another acting as a smart wall plug to turn a light on and off. </p>
 							</div> -->
 
-	<!-- Four - Education, Certs, Skills -->
-	<section id="three" class="wrapper">
+	<!-- Skills -->
+	<section id="skills" class="wrapper">
 		<div class="inner">
-			<!-- Education -->
 			<header class="major">
-				<h2>Education</h2>
+				<h2>Related Skills</h2>
 			</header>
-			<header>
-				<ul>
-					<li>
-						<h4>Bachelor of Science - Business Information Systems</h4>
-						<p>Oregon State University, Corvallis, Oregon - June 2024</p>
-					</li>
-				</ul>
+
+			<!-- centered container to match the rest of the page -->
+			<div style="max-width: 58rem; margin: 0 auto;">
+
+				<!-- Networking -->
+				<h4><i class="fa fa-sitemap" aria-hidden="true" style="margin-right:.4rem;"></i>Networking</h4>
+				<div style="display:flex; flex-wrap:wrap; gap:.5rem; margin:.5rem 0 1.25rem;">
+					<span class="button small">IPv4/IPv6</span>
+					<span class="button small">OpenVPN</span>
+					<span class="button small">IPsec</span>
+					<span class="button small">WireGuard</span>
+					<span class="button small">Tailscale/Headscale</span>
+					<span class="button small">Routing &amp; Switching</span>
+				</div>
+
+				<!-- Identity & Access -->
+				<h4><i class="fa fa-lock" aria-hidden="true" style="margin-right:.4rem;"></i>Identity &amp; Access</h4>
+				<div style="display:flex; flex-wrap:wrap; gap:.5rem; margin:.5rem 0 1.25rem;">
+					<span class="button small">Active Directory</span>
+					<span class="button small">GPO</span>
+					<span class="button small">SSO</span>
+					<span class="button small">OIDC</span>
+				</div>
+
+				<!-- Cloud -->
+				<h4><i class="fa fa-cloud" aria-hidden="true" style="margin-right:.4rem;"></i>Cloud</h4>
+				<div style="display:flex; flex-wrap:wrap; gap:.5rem; margin:.5rem 0 1.25rem;">
+					<span class="button small">Azure VMs</span>
+					<span class="button small">VNets</span>
+					<span class="button small">NSGs</span>
+					<span class="button small">Nextcloud</span>
+				</div>
+
+				<!-- Operating Systems -->
+				<h4><i class="fa fa-linux" aria-hidden="true" style="margin-right:.4rem;"></i>Linux &amp; Operating
+					Systems</h4>
+				<div style="display:flex; flex-wrap:wrap; gap:.5rem; margin:.5rem 0 1.25rem;">
+					<span class="button small">Windows</span>
+					<span class="button small">MacOS</span>
+					<span class="button small">Ubuntu/Debian</span>
+					<span class="button small">Alpine Linux</span>
+					<span class="button small">FreeBSD</span>
+				</div>
+
+				<!-- Containers & Orchestration -->
+				<h4><i class="fa fa-cubes" aria-hidden="true" style="margin-right:.4rem;"></i>Containers &amp;
+					Orchestration</h4>
+				<div style="display:flex; flex-wrap:wrap; gap:.5rem; margin:.5rem 0 1.25rem;">
+					<span class="button small">Docker</span>
+					<span class="button small">Compose</span>
+					<span class="button small">Kubernetes</span>
+					<!--<span class="button small">Helm</span>-->
+				</div>
+
+				<!-- Storage & Services -->
+				<h4><i class="fa fa-hdd-o" aria-hidden="true" style="margin-right:.4rem;"></i>Storage &amp; Services
+				</h4>
+				<div style="display:flex; flex-wrap:wrap; gap:.5rem; margin:.5rem 0 1.25rem;">
+					<span class="button small">ZFS</span>
+					<span class="button small">SMB</span>
+					<span class="button small">NFS</span>
+					<span class="button small">MongoDB</span>
+					<span class="button small">Snapshot & Replication</span>
+				</div>
+
+				<!-- Programming & Tools -->
+				<h4><i class="fa fa-code" aria-hidden="true" style="margin-right:.4rem;"></i>Programming &amp; Tools
+				</h4>
+				<div style="display:flex; flex-wrap:wrap; gap:.5rem; margin:.5rem 0 0;">
+					<span class="button small">Python</span>
+					<span class="button small">C/C++</span>
+					<span class="button small">HTML/JS</span>
+					<span class="button small">Git/GitHub</span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Education -->
+	<section id="education" class="wrapper">
+		<div class="inner">
+			<header class="major">
+				<h2><i class="fa fa-graduation-cap" aria-hidden="true" style="margin-right:.4rem;"></i>Education</h2>
 			</header>
-			<header>
-				<ul>
-					<li>
-						<h4>Associate of Science - Computer Science</h4>
-						<p>Lane Community College, Eugene, Oregon - June 2019</p>
-					</li>
-				</ul>
-			</header>
+
+			<div class="row gtr-25" style="max-width:58rem; margin:0 auto;">
+
+				<!-- OSU -->
+				<div class="col-12" style="margin-bottom:2.25rem;">
+					<div class="row gtr-15" style="align-items:center;">
+						<div class="col-3 col-12-small" style="text-align:center;">
+							<img src="images/osu-primarylogo-2-compressor.jpg" alt="Oregon State University logo"
+								style="max-height:72px; max-width:100%; height:auto; display:inline-block; border:0; box-shadow:none;">
+						</div>
+						<div class="col-9 col-12-small edu-text">
+							<h4 style="margin:0;">Bachelor of Science — Business Information Systems</h4>
+							<p style="margin:.25rem 0 0;">Oregon State University, Corvallis, Oregon — June 2024</p>
+						</div>
+					</div>
+				</div>
+
+				<!-- LCC -->
+				<div class="col-12" style="margin-bottom:2.25rem;">
+					<div class="row gtr-15" style="align-items:center;">
+						<div class="col-3 col-12-small" style="text-align:center;">
+							<img src="images/lane-logo-vertical-2-color.png" alt="Lane Community College logo"
+								style="max-height:84px; max-width:100%; height:auto; display:inline-block; border:0; box-shadow:none;">
+						</div>
+						<div class="col-9 col-12-small edu-text">
+							<h4 style="margin:0;">Associate of Science — Computer Science</h4>
+							<p style="margin:.25rem 0 0;">Lane Community College, Eugene, Oregon — June 2019</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Certs -->
+	<section id="certs" class="wrapper">
+		<div class="inner">
 
 			<!-- Certifictaions -->
 			<header class="major">
@@ -227,29 +613,21 @@
 				</ul>
 
 			</header>
-
-			<!-- Related Skills -->
-			<header class="major">
-				<h3>Related Skills</h3>
-			</header>
-			<header>
-				<div class="col-6 col-12-medium">
-					<ul>
-						<li>Experience with virtual private network solutions, such as OpenVPN, IPSec, and Wireguard
-						</li>
-						<li>Familiar with a variety of Operating systems, including MacOS, Windows, Linux, and FreeBSD
-						</li>
-						<li>Setup servers for file storage, file archival, and active directory</li>
-						<li>Familiar with Docker, Git, MongoDB, and Flask</li>
-						<li>Programming background in C/C++, with additional Experience in python, HTML, and Javascript
-						</li>
-					</ul>
-				</div>
 		</div>
 	</section>
 
-	<!-- Four - Hobbies-->
-	<section id="four" class="wrapper">
+	<style>
+		/* Center Education text when columns stack on small screens */
+		@media screen and (max-width: 736px) {
+			#education .edu-text {
+				text-align: center;
+			}
+		}
+	</style>
+
+
+	<!-- Hobbies-->
+	<section id="activities" class="wrapper">
 		<div class="inner alt">
 			<header class="major">
 				<h2>Interests and Activities</h2>
@@ -257,7 +635,7 @@
 			<p style="border-top: none; margin-top: auto;"><span class="image left"><img src="images/pic06.jpg"
 						alt="" /></span>
 				When I was 13, I built my first computer.
-				Ever since, I have been passionate about technology and the possibilities it creates. That early
+				Since then, I've been passionate about technology and the possibilities it creates. That early
 				experience
 				of assembling components, troubleshooting issues, and finally seeing it all come to life ignited a
 				curiosity
@@ -266,18 +644,19 @@
 				and networks, eventually shaping the career path I chose.</br></br>
 				These days, in addition to building computers, I enjoy tinkering with my home lab setup, constantly
 				learning
-				and expanding my knowledge. For me, technology is more than just a profession—it’s a lifelong pursuit of
-				discovery, creativity, and innovation.
+				and expanding my knowledge. For me, technology is more than just a profession—it's a lifelong pursuit of
+				discovery, creativity, aFnd innovation.
 				</br></br></br></br>
 
 				<span class="image right"><img src="images/pic01.jpg" alt="" /></span>
-				When I'm not working, often you'll find me enjoying the great outdoors in the beautiful state of Oregon.
-				Growing up, my parents often took my brother and I weekend trips to ski, snowshoe, hike, or ATV. I've
+				When I'm not working, you'll find me enjoying the great outdoors in the beautiful state of Oregon.
+				Growing up, my parents often took my brother and me on weekend trips to ski, snowshoe, hike, or ATV.
+				I've
 				spent
-				countless hours exploring trails in the Oregon Cascade range, carving down ski slopes, and zipping down
+				countless hours exploring trails in the Oregon Cascades, carving down ski slopes, and zipping down
 				the
 				Oregon coastal sand dunes.</br></br>
-				Even now, I love sharing these experiences with friends and family, whether it’s discovering new trails,
+				Even now, I love sharing these experiences with friends and family, whether it's discovering new trails,
 				planning a weekend getaway, or simply enjoying the thrill of being outdoors together.
 			</p>
 		</div>
@@ -629,21 +1008,19 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 					accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt
 					felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit
 					adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque
-					praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus
-					vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer
-					ac pellentesque praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu
-					faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum
-					ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing
-					accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+					praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer
+					ac pellentesque praesent.</p>
 			</section>
 
 		</div>
 	</section>
 	-->
-
-	<!-- Footer -->
-	<footer id="footer">
-		<p> Credits: <a href="http://html5up.net">HTML5 UP</a></p>
+	<!-- Footer with Contact Me button -->
+	<footer style="text-align:center; padding:30px;">
+		<a href="#contact" class="button scrolly">Contact Me</a>
+		<p style="font-size: 0.8em; color: #999; margin-top: 10px;">
+			Credits: <a href="http://html5up.net" style="color: #bbb;">HTML5 UP</a>
+		</p>
 	</footer>
 
 	<!-- Scripts -->
