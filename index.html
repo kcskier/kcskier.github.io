@@ -51,26 +51,60 @@
 			<h2>Contact</h2>
 		</header>
 		<ul class="icons labeled">
-			<li><a href="mailto:kendell.crocker@protonmail.com" class="icon label fa-envelope"><span
-						class="label">kendell.crocker@protonmail.com</span></a></li>
-			<li><a href="https://github.com/kcskier" class="icon brands fa-github"><span
-						class="label">@kcskier</span></a></li>
-			<li><a href="https://www.linkedin.com/in/kendell-crocker-b2144519b"
-					class="icon brands fa-linkedin-square"><span class="label">Kendell Crocker</span></a></li>
-		</ul>
-		<ul class="icons labeled" style="margin-top: 1rem;">
 			<li>
+				<a href="mailto:kendell.crocker@protonmail.com" class="icon label fa-envelope">
+					<span class="label">kendell.crocker@protonmail.com</span>
+				</a>
+			</li>
+			<li>
+				<a href="https://github.com/kcskier" class="icon brands fa-github">
+					<span class="label">@kcskier</span>
+				</a>
+			</li>
+			<li>
+				<a href="https://www.linkedin.com/in/kendell-crocker-b2144519b" class="icon brands fa-linkedin-square">
+					<span class="label">Kendell Crocker</span>
+				</a>
+			</li>
+			<li class="resume">
 				<a href="Kendell Crocker Resume.pdf" class="icon label fa-file-pdf-o" target="_blank" rel="noopener"
 					download="Kendell_Crocker_Resume.pdf">
 					<span class="label">Resume Download</span>
 				</a>
 			</li>
 		</ul>
+
 		<!--<ul class="icons labeled">
                     <li><a href="https://bitbucket.org/kcskier/profile/repositories" class="icon brands fa-bitbucket"><span class="label">Kendell Crocker</span></a></li>
                     <li><a href="https://github.com/kcskier" class="icon brands fa-github"><span class="label">@kcskier</span></a></li>
                 </ul>-->
 	</section>
+	<style>
+		/* Default (phones): resume behaves like the others */
+		.icons.labeled li.resume {
+			width: auto;
+			text-align: inherit;
+		}
+
+		/* Wider screens: put Resume on its own centered line */
+		@media (min-width: 768px) {
+			.icons.labeled {
+				text-align: center;
+			}
+
+			/* keep whole list centered */
+			.icons.labeled li.resume {
+				width: 100%;
+				/* forces a new row */
+				display: inline-block;
+				/* plays nicely with theme inline-blocks */
+				text-align: center;
+				/* center the resume label/icon */
+				margin-top: 0.75rem;
+				/* optional breathing room */
+			}
+		}
+	</style>
 
 	<!-- Projects -->
 	<section id="projects" class="wrapper">
@@ -589,8 +623,8 @@
 						<p>Expected September 2025, Microsoft Corporation</p>
 					</li>
 					<li>
-						<h4><a href="https://www.isc2.org/certifications/cc"
-								target="_blank">Certified in Cybersecurity (CC)</a></h4>
+						<h4><a href="https://www.isc2.org/certifications/cc" target="_blank">Certified in Cybersecurity
+								(CC)</a></h4>
 						<p>July 2025, ISC²</p>
 					</li>
 					<li>
