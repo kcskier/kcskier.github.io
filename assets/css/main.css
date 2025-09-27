@@ -4147,3 +4147,204 @@ input, select, textarea {
 		}
 
 	}
+/* Custom overrides extracted from index.html */
+.icons.labeled li.resume {
+    width: auto;
+    text-align: inherit;
+}
+
+@media (min-width: 768px) {
+    .icons.labeled {
+        text-align: center;
+    }
+
+    .icons.labeled li.resume {
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+        margin-top: 0.75rem;
+    }
+}
+
+.proj-tile {
+    aspect-ratio: 1/1;
+    background: #f5f7fa;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: .6rem;
+    overflow: hidden;
+}
+
+.proj-tile img.logo {
+    width: 72%;
+    height: 72%;
+    object-fit: contain;
+}
+
+.proj-tile img.photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+details.more-projects {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+details.more-projects > summary {
+    list-style: none;
+}
+
+details.more-projects > summary::-webkit-details-marker {
+    display: none;
+}
+
+details.more-projects > summary.button {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    margin: 0 auto;
+}
+
+details.more-projects > summary .label-less {
+    display: none;
+}
+
+details.more-projects[open] > summary .label-more {
+    display: none;
+}
+
+details.more-projects[open] > summary .label-less {
+    display: inline;
+}
+
+details.more-projects > summary .chev {
+    transition: transform .2s ease;
+}
+
+details.more-projects[open] > summary .chev {
+    transform: rotate(180deg);
+}
+
+details.more-projects[open] .more-grid {
+    margin-top: 1rem;
+}
+
+.project-thumb {
+    max-width: 280px;
+    margin-left: auto;
+}
+
+.project-thumb-img {
+    aspect-ratio: 1 / 1;
+}
+
+.icon-leading {
+    margin-right: .35rem;
+}
+
+.icon-heading {
+    margin-right: .4rem;
+}
+
+.project-card-title {
+    margin: .1rem 0 .2rem;
+}
+
+.project-card-line {
+    margin: 0 0 .4rem;
+}
+
+.project-links {
+    margin: 0;
+}
+
+.sprinkler-icon {
+    color: #97a0aa;
+}
+
+.skills-wrapper {
+    max-width: 58rem;
+    margin: 0 auto;
+}
+
+.skill-tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+    margin: .5rem 0 1.25rem;
+}
+
+.skill-tag-list--compact {
+    margin-bottom: 0;
+}
+
+.education-wrapper {
+    max-width: 58rem;
+    margin: 0 auto;
+}
+
+.education-entry {
+    margin-bottom: 2.25rem;
+}
+
+.education-row {
+    align-items: center;
+}
+
+.education-logo {
+    text-align: center;
+}
+
+.education-logo-img {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    border: 0;
+    box-shadow: none;
+}
+
+.education-logo-img--osu {
+    max-height: 72px;
+}
+
+.education-logo-img--lcc {
+    max-height: 84px;
+}
+
+.education-degree {
+    margin: 0;
+}
+
+.education-meta {
+    margin: .25rem 0 0;
+}
+
+.activities-lead {
+    border-top: none;
+    margin-top: auto;
+}
+
+.footer-cta {
+    text-align: center;
+    padding: 30px;
+}
+
+.footer-credit {
+    font-size: 0.8em;
+    color: #999;
+    margin-top: 10px;
+}
+
+.footer-credit-link {
+    color: #bbb;
+}
+
+@media screen and (max-width: 736px) {
+    #education .edu-text {
+        text-align: center;
+    }
+}

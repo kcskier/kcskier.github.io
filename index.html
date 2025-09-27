@@ -79,34 +79,7 @@
                     <li><a href="https://github.com/kcskier" class="icon brands fa-github"><span class="label">@kcskier</span></a></li>
                 </ul>-->
 	</section>
-	<style>
-		/* Default (phones): resume behaves like the others */
-		.icons.labeled li.resume {
-			width: auto;
-			text-align: inherit;
-		}
-
-		/* Wider screens: put Resume on its own centered line */
-		@media (min-width: 768px) {
-			.icons.labeled {
-				text-align: center;
-			}
-
-			/* keep whole list centered */
-			.icons.labeled li.resume {
-				width: 100%;
-				/* forces a new row */
-				display: inline-block;
-				/* plays nicely with theme inline-blocks */
-				text-align: center;
-				/* center the resume label/icon */
-				margin-top: 0.75rem;
-				/* optional breathing room */
-			}
-		}
-	</style>
-
-	<!-- Projects -->
+<!-- Projects -->
 	<section id="projects" class="wrapper">
 		<div class="inner">
 
@@ -135,16 +108,16 @@
 					<!--
 					<p class="links">
 						<a class="button small" href="https://github.com/kcskier" target="_blank" rel="noopener">
-							<i class="fa fa-github fa-lg" aria-hidden="true" style="margin-right:.35rem;"></i>
+							<i class="fa fa-github fa-lg icon-leading" aria-hidden="true"></i>
 							View on GitHub
 						</a>
 					</p>
 					-->
 				</div>
 				<div class="col-4 col-12-small">
-					<span class="image fit" style="max-width:280px; margin-left:auto;">
+					<span class="image fit project-thumb">
 						<img src="images/blackbox.jpg" srcset="images/blackbox.jpg 2x, images/blackbox.jpg 1x"
-							style="aspect-ratio:1/1" loading="lazy" alt="Raspberry Pi 'Black-Box' VPN endpoint">
+							class="project-thumb-img" loading="lazy" alt="Raspberry Pi 'Black-Box' VPN endpoint">
 					</span>
 				</div>
 			</div>
@@ -177,10 +150,10 @@
 					</p>-->
 				</div>
 				<div class="col-4 col-12-small">
-					<span class="image fit" style="max-width:280px; margin-left:auto;">
+					<span class="image fit project-thumb">
 						<img src="images/headscale_authentik_flow.png"
 							srcset="images/headscale_authentik_flow.png 2x, images/headscale_authentik_flow.png 1x"
-							style="aspect-ratio:1/1" loading="lazy" alt="Headscale and Authentik OIDC control plane">
+							class="project-thumb-img" loading="lazy" alt="Headscale and Authentik OIDC control plane">
 					</span>
 				</div>
 			</div>
@@ -210,15 +183,15 @@
 					<p class="links">
 						<a class="button small" href="https://github.com/kcskier/k3s-cluster-demo" target="_blank"
 							rel="noopener">
-							<i class="fa fa-github fa-lg" aria-hidden="true" style="margin-right:.35rem;"></i>
+							<i class="fa fa-github fa-lg icon-leading" aria-hidden="true"></i>
 							View on GitHub
 						</a>
 					</p>
 				</div>
 				<div class="col-4 col-12-small">
-					<span class="image fit" style="max-width:280px; margin-left:auto;">
+					<span class="image fit project-thumb">
 						<img src="images/k3s_demo.png" srcset="images/k3s_demo.png 2x, images/k3s_demo.png 1x"
-							style="aspect-ratio:1/1" loading="lazy"
+							class="project-thumb-img" loading="lazy"
 							alt="kubectl output showing deployment, service, and pods on a k3s demo cluster">
 					</span>
 				</div>
@@ -243,31 +216,30 @@
 							<img class="logo" src="images/truenas_scale-logo-full-color-rgb.webp" alt="TrueNAS logo"
 								loading="lazy">
 						</div>
-						<h5 style="margin:.1rem 0 .2rem;"><strong>TrueNAS SCALE</strong></h5>
-						<p class="subtle" style="margin:0 0 .4rem;">ZFS snapshots & replication</p>
-						<p class="subtle" style="margin:0 0 .4rem;">App Hosting</p>
-						<p class="subtle" style="margin:0 0 .4rem;">Storage and data services</p>
-						<p class="tech" style="margin:0 0 .4rem;"><i class="fa fa-code"></i> ZFS · SMB/NFS · App
+						<h5 class="project-card-title"><strong>TrueNAS SCALE</strong></h5>
+						<p class="subtle project-card-line">ZFS snapshots & replication</p>
+						<p class="subtle project-card-line">App Hosting</p>
+						<p class="subtle project-card-line">Storage and data services</p>
+						<p class="tech project-card-line"><i class="fa fa-code"></i> ZFS · SMB/NFS · App
 							Platform</p>
 						<!--
-						<p class="links" style="margin:0;"><a class="button small icon fa-external-link" href="#"
+						<p class="links project-links"><a class="button small icon fa-external-link" href="#"
 								target="_blank" rel="noopener">Notes</a></p>
 						-->
 					</div>
 
 					<!-- Python Sprinklers (with MDI sprinkler icon) -->
 					<div class="col-4 col-12-small">
-						<div class="proj-tile" role="img" aria-label="Sprinkler project" style="aspect-ratio:1/1; background:#f5f7fa; border-radius:8px;
-              display:flex; align-items:center; justify-content:center; margin-bottom:.6rem;">
-							<span class="mdi mdi-sprinkler-variant mdi-48px" style="color:#97a0aa;"
+						<div class="proj-tile" role="img" aria-label="Sprinkler project">
+							<span class="mdi mdi-sprinkler-variant mdi-48px sprinkler-icon"
 								aria-hidden="true"></span>
 						</div>
 
-						<h5 style="margin:.1rem 0 .2rem;"><strong>Python-Based Sprinkler System</strong></h5>
-						<p class="subtle" style="margin:0 0 .4rem;">Weather-aware zone control</p>
-						<p class="subtle" style="margin:0 0 .4rem;">Custom-built control stations</p>
-						<p class="subtle" style="margin:0 0 .4rem;">Integration with Home Assistant</p>
-						<p class="tech" style="margin:0 0 .4rem;"><i class="fa fa-code"></i> Python · NOAA/NWS API ·
+						<h5 class="project-card-title"><strong>Python-Based Sprinkler System</strong></h5>
+						<p class="subtle project-card-line">Weather-aware zone control</p>
+						<p class="subtle project-card-line">Custom-built control stations</p>
+						<p class="subtle project-card-line">Integration with Home Assistant</p>
+						<p class="tech project-card-line"><i class="fa fa-code"></i> Python · NOAA/NWS API ·
 							Shelly</p>
 					</div>
 
@@ -277,98 +249,21 @@
 							<!-- SVG or PNG works; SVG preferred if available -->
 							<img class="logo" src="images/ha_icon.png" alt="Home Assistant logo" loading="lazy">
 						</div>
-						<h5 style="margin:.1rem 0 .2rem;"><strong>Home Assistant</strong></h5>
-						<p class="subtle" style="margin:0 0 .4rem;">Unified Home Automation Platform</p>
-						<p class="subtle" style="margin:0 0 .4rem;">IoT - Zigbee, Z-Wave, Wi-Fi devices</p>
-						<p class="subtle" style="margin:0 0 .4rem;">Whole Home Automation</p>
-						<p class="tech" style="margin:0 0 .4rem;"><i class="fa fa-code"></i> Shelly · Zigbee · Z-Wave ·
+						<h5 class="project-card-title"><strong>Home Assistant</strong></h5>
+						<p class="subtle project-card-line">Unified Home Automation Platform</p>
+						<p class="subtle project-card-line">IoT - Zigbee, Z-Wave, Wi-Fi devices</p>
+						<p class="subtle project-card-line">Whole Home Automation</p>
+						<p class="tech project-card-line"><i class="fa fa-code"></i> Shelly · Zigbee · Z-Wave ·
 							MQTT</p>
 						<!--
-						<p class="links" style="margin:0;"><a class="button small icon fa-external-link" href="#"
+						<p class="links project-links"><a class="button small icon fa-external-link" href="#"
 								target="_blank" rel="noopener">Notes</a></p>
 						-->
 					</div>
 				</div>
 			</details>
 		</div>
-
-		<style>
-			/* square, centered tile */
-			.proj-tile {
-				aspect-ratio: 1/1;
-				background: #f5f7fa;
-				border-radius: 8px;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				margin-bottom: .6rem;
-				overflow: hidden;
-			}
-
-			/* use for logos/marks */
-			.proj-tile img.logo {
-				width: 72%;
-				height: 72%;
-				object-fit: contain;
-			}
-
-			/* use for photos/screens */
-			.proj-tile img.photo {
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
-			}
-
-			/* Clean summary and center it */
-			details.more-projects {
-				margin-top: 1rem;
-				text-align: center;
-			}
-
-			details.more-projects>summary {
-				list-style: none;
-			}
-
-			details.more-projects>summary::-webkit-details-marker {
-				display: none;
-			}
-
-			/* Make summary look/behave like a button */
-			details.more-projects>summary.button {
-				display: inline-flex;
-				align-items: center;
-				gap: .5rem;
-				margin: 0 auto;
-			}
-
-			/* Toggle labels + chevron */
-			details.more-projects>summary .label-less {
-				display: none;
-			}
-
-			details.more-projects[open]>summary .label-more {
-				display: none;
-			}
-
-			details.more-projects[open]>summary .label-less {
-				display: inline;
-			}
-
-			details.more-projects>summary .chev {
-				transition: transform .2s ease;
-			}
-
-			details.more-projects[open]>summary .chev {
-				transform: rotate(180deg);
-			}
-
-			/* Optional: a little space above the grid when open */
-			details.more-projects[open] .more-grid {
-				margin-top: 1rem;
-			}
-		</style>
-
-	</section>
+</section>
 
 	<!-- Experience-->
 	<section id="experience" class="wrapper">
@@ -452,31 +347,6 @@
 	</section>
 	<!-- End Job 1 -->
 
-	<!-- Projects --><!--
-					<header class="major">
-						<h2>Projects</h2>
-					</header>-->
-
-	<!-- Project 1 --><!--
-					<header>
-						<h4>Brevet Checkpoint Calculator</h4>
-						<p>Software Design Class - Spring 2019</p>
-					</header>                        
-						<div class="col-6 col-12-medium">
-							<p> This was a webserver built in Python using the Flask framework, and also included some Javascrpt and HTML. </ br>
-								The server displays a page to the user that runs javascript </br>
-								to interactively provide you with times for when a brevet checkpoint should open and also close. </p>
-							</div>   
-										
-					<header>
-						<h4>Smart Home On A Budget</h4>
-						<p>Career Internship Seminar - Winter 2020</p>
-					</header>                        
-						<div class="col-6 col-12-medium">
-							<p> A simple project that was designed to mimick how smart home devices work. It is built for two raspberry pi computers, </ br>
-								one acting as a server, and another acting as a smart wall plug to turn a light on and off. </p>
-							</div> -->
-
 	<!-- Skills -->
 	<section id="skills" class="wrapper">
 		<div class="inner">
@@ -485,11 +355,11 @@
 			</header>
 
 			<!-- centered container to match the rest of the page -->
-			<div style="max-width: 58rem; margin: 0 auto;">
+			<div class="skills-wrapper">
 
 				<!-- Networking -->
-				<h4><i class="fa fa-sitemap" aria-hidden="true" style="margin-right:.4rem;"></i>Networking</h4>
-				<div style="display:flex; flex-wrap:wrap; gap:.5rem; margin:.5rem 0 1.25rem;">
+				<h4><i class="fa fa-sitemap icon-heading" aria-hidden="true"></i>Networking</h4>
+				<div class="skill-tag-list">
 					<span class="button small">Cisco</span>
 					<span class="button small">Cradlepoint</span>
 					<span class="button small">UniFi</span>
@@ -501,8 +371,8 @@
 				</div>
 
 				<!-- Identity & Access -->
-				<h4><i class="fa fa-lock" aria-hidden="true" style="margin-right:.4rem;"></i>Identity &amp; Access (IAM)</h4>
-				<div style="display:flex; flex-wrap:wrap; gap:.5rem; margin:.5rem 0 1.25rem;">
+				<h4><i class="fa fa-lock icon-heading" aria-hidden="true"></i>Identity &amp; Access (IAM)</h4>
+				<div class="skill-tag-list">
 					<span class="button small">Active Directory</span>
 					<span class="button small">Authentik</span>
 					<span class="button small">GPO</span>
@@ -511,17 +381,17 @@
 				</div>
 
 				<!-- Cloud -->
-				<h4><i class="fa fa-cloud" aria-hidden="true" style="margin-right:.4rem;"></i>Cloud</h4>
-				<div style="display:flex; flex-wrap:wrap; gap:.5rem; margin:.5rem 0 1.25rem;">
+				<h4><i class="fa fa-cloud icon-heading" aria-hidden="true"></i>Cloud</h4>
+				<div class="skill-tag-list">
 					<span class="button small">Azure VMs</span>
 					<span class="button small">VNets</span>
 					<span class="button small">NSGs</span>
 				</div>
 
 				<!-- Operating Systems -->
-				<h4><i class="fa fa-linux" aria-hidden="true" style="margin-right:.4rem;"></i>Operating
+				<h4><i class="fa fa-linux icon-heading" aria-hidden="true"></i>Operating
 					Systems &amp; Platforms</h4>
-				<div style="display:flex; flex-wrap:wrap; gap:.5rem; margin:.5rem 0 1.25rem;">
+				<div class="skill-tag-list">
 					<span class="button small">Windows</span>
 					<span class="button small">MacOS</span>
 					<span class="button small">Ubuntu/Debian</span>
@@ -530,9 +400,9 @@
 				</div>
 
 				<!-- Containers & Orchestration -->
-				<h4><i class="fa fa-cubes" aria-hidden="true" style="margin-right:.4rem;"></i>Containers &amp;
+				<h4><i class="fa fa-cubes icon-heading" aria-hidden="true"></i>Containers &amp;
 					Orchestration</h4>
-				<div style="display:flex; flex-wrap:wrap; gap:.5rem; margin:.5rem 0 1.25rem;">
+				<div class="skill-tag-list">
 					<span class="button small">Docker</span>
 					<span class="button small">Compose</span>
 					<span class="button small">Kubernetes</span>
@@ -540,9 +410,9 @@
 				</div>
 
 				<!-- Storage & Services -->
-				<h4><i class="fa fa-hdd-o" aria-hidden="true" style="margin-right:.4rem;"></i>Storage &amp; Services
+				<h4><i class="fa fa-hdd-o icon-heading" aria-hidden="true"></i>Storage &amp; Services
 				</h4>
-				<div style="display:flex; flex-wrap:wrap; gap:.5rem; margin:.5rem 0 1.25rem;">
+				<div class="skill-tag-list">
 					<span class="button small">ZFS</span>
 					<span class="button small">SMB</span>
 					<span class="button small">NFS</span>
@@ -552,9 +422,9 @@
 				</div>
 
 				<!-- Programming & Tools -->
-				<h4><i class="fa fa-code" aria-hidden="true" style="margin-right:.4rem;"></i>Programming &amp; Development Tools
+				<h4><i class="fa fa-code icon-heading" aria-hidden="true"></i>Programming &amp; Development Tools
 				</h4>
-				<div style="display:flex; flex-wrap:wrap; gap:.5rem; margin:.5rem 0 0;">
+				<div class="skill-tag-list skill-tag-list--compact">
 					<span class="button small">Python</span>
 					<span class="button small">C/C++</span>
 					<span class="button small">HTML/JavaScript</span>
@@ -569,35 +439,35 @@
 	<section id="education" class="wrapper">
 		<div class="inner">
 			<header class="major">
-				<h2><i class="fa fa-graduation-cap" aria-hidden="true" style="margin-right:.4rem;"></i>Education</h2>
+				<h2><i class="fa fa-graduation-cap icon-heading" aria-hidden="true"></i>Education</h2>
 			</header>
 
-			<div class="row gtr-25" style="max-width:58rem; margin:0 auto;">
+			<div class="row gtr-25 education-wrapper">
 
 				<!-- OSU -->
-				<div class="col-12" style="margin-bottom:2.25rem;">
-					<div class="row gtr-15" style="align-items:center;">
-						<div class="col-3 col-12-small" style="text-align:center;">
+				<div class="col-12 education-entry">
+					<div class="row gtr-15 education-row">
+						<div class="col-3 col-12-small education-logo">
 							<img src="images/osu-primarylogo-2-compressor.jpg" alt="Oregon State University logo"
-								style="max-height:72px; max-width:100%; height:auto; display:inline-block; border:0; box-shadow:none;">
+								class="education-logo-img education-logo-img--osu">
 						</div>
 						<div class="col-9 col-12-small edu-text">
-							<h4 style="margin:0;">Bachelor of Science — Business Information Systems</h4>
-							<p style="margin:.25rem 0 0;">Oregon State University, Corvallis, Oregon — June 2024</p>
+							<h4 class="education-degree">Bachelor of Science — Business Information Systems</h4>
+							<p class="education-meta">Oregon State University, Corvallis, Oregon — June 2024</p>
 						</div>
 					</div>
 				</div>
 
 				<!-- LCC -->
-				<div class="col-12" style="margin-bottom:2.25rem;">
-					<div class="row gtr-15" style="align-items:center;">
-						<div class="col-3 col-12-small" style="text-align:center;">
+				<div class="col-12 education-entry">
+					<div class="row gtr-15 education-row">
+						<div class="col-3 col-12-small education-logo">
 							<img src="images/lane-logo-vertical-2-color.png" alt="Lane Community College logo"
-								style="max-height:84px; max-width:100%; height:auto; display:inline-block; border:0; box-shadow:none;">
+								class="education-logo-img education-logo-img--lcc">
 						</div>
 						<div class="col-9 col-12-small edu-text">
-							<h4 style="margin:0;">Associate of Science — Computer Science</h4>
-							<p style="margin:.25rem 0 0;">Lane Community College, Eugene, Oregon — June 2019</p>
+							<h4 class="education-degree">Associate of Science — Computer Science</h4>
+							<p class="education-meta">Lane Community College, Eugene, Oregon — June 2019</p>
 						</div>
 					</div>
 				</div>
@@ -658,24 +528,13 @@
 			</header>
 		</div>
 	</section>
-
-	<style>
-		/* Center Education text when columns stack on small screens */
-		@media screen and (max-width: 736px) {
-			#education .edu-text {
-				text-align: center;
-			}
-		}
-	</style>
-
-
-	<!-- Hobbies-->
+<!-- Hobbies-->
 	<section id="activities" class="wrapper">
 		<div class="inner alt">
 			<header class="major">
 				<h2>Interests and Activities</h2>
 			</header>
-			<p style="border-top: none; margin-top: auto;"><span class="image left"><img src="images/pic06.jpg"
+			<p class="activities-lead"><span class="image left"><img src="images/pic06.jpg"
 						alt="" /></span>
 				When I was 13, I built my first computer.
 				Since then, I've been passionate about technology and the possibilities it creates. That early
@@ -1059,10 +918,10 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	</section>
 	-->
 	<!-- Footer with Contact Me button -->
-	<footer style="text-align:center; padding:30px;">
+	<footer class="footer-cta">
 		<a href="#contact" class="button scrolly">Contact Me</a>
-		<p style="font-size: 0.8em; color: #999; margin-top: 10px;">
-			Credits: <a href="http://html5up.net" style="color: #bbb;">HTML5 UP</a>
+		<p class="footer-credit">
+			Credits: <a href="http://html5up.net" class="footer-credit-link">HTML5 UP</a>
 		</p>
 	</footer>
 
