@@ -4074,13 +4074,12 @@ input, select, textarea {
 
 /* Footer */
 
-	#footer {
-		background-color: #f7f7f7;
-		color: #999999;
-		padding: 4.5em 0 2.5em 0 ;
-		color: #b0b0b0;
-		text-align: center;
-	}
+    #footer {
+        background-color: #f7f7f7;
+        padding: 4.5em 0 2.5em 0 ;
+        color: #b0b0b0;
+        text-align: center;
+    }
 
 		#footer input, #footer select, #footer textarea {
 			color: #999999;
@@ -4116,9 +4115,7 @@ input, select, textarea {
 			border-bottom-color: #d6d6d6;
 		}
 
-		#footer a {
-			color: inherit;
-		}
+        
 
 		#footer .copyright {
 			font-size: 0.8em;
@@ -4183,11 +4180,10 @@ input, select, textarea {
     object-fit: contain;
 }
 
-.proj-tile img.photo {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+/* Base image sizing for tiles; specific variants override as needed */
+.proj-tile img { width: 100%; height: 100%; }
+
+.proj-tile img.photo { object-fit: cover; }
 
 details.more-projects {
     margin-top: 1rem;
@@ -4209,10 +4205,7 @@ details.more-projects > summary.button {
     margin: 0 auto;
 }
 
-details.more-projects > summary .label-less {
-    display: none;
-}
-
+details.more-projects > summary .label-less,
 details.more-projects[open] > summary .label-more {
     display: none;
 }
@@ -4242,13 +4235,7 @@ details.more-projects[open] .more-grid {
     aspect-ratio: 1 / 1;
 }
 
-.icon-leading {
-    margin-right: .35rem;
-}
-
-.icon-heading {
-    margin-right: .4rem;
-}
+.icon-leading, .icon-heading { margin-right: .4rem; }
 
 .project-card-title {
     margin: .1rem 0 .2rem;
@@ -4266,7 +4253,7 @@ details.more-projects[open] .more-grid {
     color: #97a0aa;
 }
 
-.skills-wrapper {
+.skills-wrapper, .education-wrapper {
     max-width: 58rem;
     margin: 0 auto;
 }
@@ -4282,10 +4269,7 @@ details.more-projects[open] .more-grid {
     margin-bottom: 0;
 }
 
-.education-wrapper {
-    max-width: 58rem;
-    margin: 0 auto;
-}
+
 
 .education-entry {
     margin-bottom: 2.25rem;
