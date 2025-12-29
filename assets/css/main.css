@@ -4332,3 +4332,12 @@ details.more-projects[open] .more-grid {
         text-align: center;
     }
 }
+
+/* remove pointer cursor for skill tags */
+.skills-wrapper .button {
+    cursor: default;     /* stops the hand cursor */
+}
+.skills-wrapper .button:hover,
+.skills-wrapper .button:active {
+    background-color: transparent;  /* removes hover highlight */
+}
